@@ -2,67 +2,128 @@ body{
   background-color: #262626;
   margin: 0;
   height: 100vh;
-  display: flex;
-justify-content: center;
-align-items: center;
+  font-family: 'Poppins', sans-serif;
 }
-#box{
-  width: 200px;
-  height: 200px;
+.rombo{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.raya1{
+  width: 350px;
+  height: 4px;
+  background-color: #262626;
+}
+.raya2{
+  width: 350px;
+  height: 4px;
+  background-color: #262626;
+}
+.box{
+  width: 300px;
+  height: 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 5px;
   transform: rotate(45deg);
   overflow: hidden;
+  position: relative;
 }
 div{
   transition: all .5s ease; 
+  border-radius: 20px; 
+}
+.text{
+  position: absolute;
+  z-index: 5;
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.text{
+  text-align: center;
+}
+.text h3{
+  margin: 0;
+  color: #F4F4F8;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  display: none;
+}
+.text p{
+  margin: 0;
+  color: #F3FCF0;
+  transition: all .2s ease-in-out;
+  opacity: 0;
+  display: none;
+}
+.text .title3, .text .content3{
+  color: #343a40;
 }
 .box1{
-  background-color: red;
+  background-color: #C3423F;
+}
+.box1:hover{
+ transform: scale(3.5);
+ z-index: 4;
 }
 /* .box1:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 } */
-.box1{
-  background-color: red;
-}
-.box1:hover{
- transform: scale(3.2);
- z-index: 4;
-}
 .box2{
-  background-color: blue;
+  background-color: #9BC53D;
 }
 /* .box2:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 } */
 .box2:hover{
-  transform: scale(3.2);
+  transform: scale(3.5);
  z-index: 4;
  }
 .box3{
-  background-color: yellow;
+  background-color: #FDE74C;
 }
 /* .box3:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 } */
 .box3:hover{
- transform: scale(3.2);
+ transform: scale(3.5);
  z-index: 4;
 }
 .box4{
-  background-color: green;
+  background-color: #5BC0EB;
 }
 /* .box4:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
 } */
 .box4:hover{
- transform: scale(3.2);
+ transform: scale(3.5);
  z-index: 4;
+}
+ .text .block{
+  display: block;
+ }
+ .text .vanished{
+  opacity: 1;  
+ }
+ .bg1{
+   background-color: #C3423F;
+ }
+ .bg2{
+  background-color: #9BC53D;
+}
+.bg3{
+  background-color: #FDE74C;
+}
+.bg4{
+  background-color: #5BC0EB;
 }
