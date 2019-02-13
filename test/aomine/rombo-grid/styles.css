@@ -13,12 +13,7 @@ body{
   justify-items: center;
   align-items: center;
 }
-.raya1{
-  width: 350px;
-  height: 4px;
-  background-color: #262626;
-}
-.raya2{
+.line1, .line2{
   width: 350px;
   height: 4px;
   background-color: #262626;
@@ -44,8 +39,6 @@ div{
   left: 50%;
   top: 50%; 
   transform: translate(-50%, -50%) rotate(-45deg);
-}
-.text{
   text-align: center;
 }
 .text h3{
@@ -72,17 +65,9 @@ div{
  transform: scale(3.5);
  z-index: 4;
 }
-/* .box1:hover{
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-} */
 .box2{
   background-color: #9BC53D;
 }
-/* .box2:hover{
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-} */
 .box2:hover{
   transform: scale(3.5);
  z-index: 4;
@@ -90,10 +75,6 @@ div{
 .box3{
   background-color: #FDE74C;
 }
-/* .box3:hover{
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-} */
 .box3:hover{
  transform: scale(3.5);
  z-index: 4;
@@ -101,10 +82,6 @@ div{
 .box4{
   background-color: #5BC0EB;
 }
-/* .box4:hover{
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 2;
-} */
 .box4:hover{
  transform: scale(3.5);
  z-index: 4;

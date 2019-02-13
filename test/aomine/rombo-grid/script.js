@@ -11,112 +11,52 @@ var content1 = document.querySelector('.content1');
 var content2 = document.querySelector('.content2');
 var content3 = document.querySelector('.content3');
 var content4 = document.querySelector('.content4');
-var raya1 = document.querySelector('.raya1');
-var raya2 = document.querySelector('.raya2');
+var line1 = document.querySelector('.line1');
+var line2 = document.querySelector('.line2');
 
-//
-box1.addEventListener('mouseover', ()=>{
-  setTimeout(()=>{
-    title1.classList.add('vanished');
-  }, 200);
-  setTimeout(()=>{
-    content1.classList.add('vanished');
-  }, 200);
-  title1.classList.add('block');
-  content1.classList.add('block');
-  raya1.classList.add('bg1');
-  raya2.classList.add('bg1');
-});
+//Box 1
+box1.addEventListener('mouseover', over(title1, content1));
 
-box1.addEventListener('mouseout', ()=>{
-  setTimeout(()=>{
-  title1.classList.remove('block');
-  }, 200);
-  setTimeout(()=>{
-  content1.classList.remove('block');   
-  }, 200);
-  raya1.classList.remove('bg1');
-  raya2.classList.remove('bg1');
-  title1.classList.remove('vanished');
-  content1.classList.remove('vanished');
-});
+box1.addEventListener('mouseover', out(title1, content1));
 
-//
-box2.addEventListener('mouseover', ()=>{
-  setTimeout(()=>{
-    title2.classList.add('vanished');
-  }, 200);
-  setTimeout(()=>{
-    content2.classList.add('vanished');
-  }, 200);
-  raya1.classList.add('bg2');
-  raya2.classList.add('bg2');
-  title2.classList.add('block');
-  content2.classList.add('block');
-});
+//Box 2
+box2.addEventListener('mouseover', over(title2, content2));
 
-box2.addEventListener('mouseout', ()=>{
-  setTimeout(()=>{
-  title2.classList.remove('block');
-  }, 200);
-  setTimeout(()=>{
-  content2.classList.remove('block');   
-  }, 200);
-  raya1.classList.remove('bg2');
-  raya2.classList.remove('bg2');
-    title2.classList.remove('vanished');
-    content2.classList.remove('vanished');
-});
+box2.addEventListener('mouseover', out(title2, content2));
 
-//
-box3.addEventListener('mouseover', ()=>{
-  setTimeout(()=>{
-    title3.classList.add('vanished');
-  }, 200);
-  setTimeout(()=>{
-    content3.classList.add('vanished');
-  }, 200);
-  raya1.classList.add('bg3');
-  raya2.classList.add('bg3');
-  title3.classList.add('block');
-  content3.classList.add('block');
-});
+//Box 3
+box3.addEventListener('mouseover', over(title3, content3));
 
-box3.addEventListener('mouseout', ()=>{
-  setTimeout(()=>{
-  title3.classList.remove('block');
-  }, 200);
-  setTimeout(()=>{
-  content3.classList.remove('block');   
-  }, 200);
-  raya1.classList.remove('bg3');
-  raya2.classList.remove('bg3');
-    title3.classList.remove('vanished');
-    content3.classList.remove('vanished');
-});
+box3.addEventListener('mouseover', out(title3, content3));
 
-//
-box4.addEventListener('mouseover', ()=>{
+//Box 4
+box4.addEventListener('mouseover', over(title4, content4));
+
+box4.addEventListener('mouseover', out(title4, content4));
+
+//Funciones
+function over(title, content){
   setTimeout(()=>{
-    title4.classList.add('vanished');
+    title.classList.add('vanished');
   }, 200);
   setTimeout(()=>{
-    content4.classList.add('vanished');
+    content.classList.add('vanished');
   }, 200);
-  raya1.classList.add('bg4');
-  raya2.classList.add('bg4');
-  title4.classList.add('block');
-  content4.classList.add('block');
-});
-box4.addEventListener('mouseout', ()=>{
+  line1.classList.add('bg4');
+  line2.classList.add('bg4');
+  title.classList.add('block');
+  content.classList.add('block');
+}
+
+function out(title, content){
   setTimeout(()=>{
-  title4.classList.remove('block');
+    title.classList.remove('block');
   }, 200);
   setTimeout(()=>{
-  content4.classList.remove('block');   
+    content.classList.remove('block');   
   }, 200);
-  raya1.classList.remove('bg4');
-  raya2.classList.remove('bg4');
-    title4.classList.remove('vanished');
-    content4.classList.remove('vanished');
-});
+  line1.classList.remove('bg4');
+  line2.classList.remove('bg4');
+  title.classList.remove('vanished');
+  content.classList.remove('vanished');
+}
