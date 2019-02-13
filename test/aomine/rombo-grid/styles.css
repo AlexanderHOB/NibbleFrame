@@ -1,0 +1,33 @@
+body{
+  background-color: #262626;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+#box{
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  grid-gap: 5px;
+  transform: rotate(45deg);
+}
+#box1{
+  background-color: red;
+}
+#box1:hover{
+  background-color: white;
+}
+#box2{
+  background-color: blue;
+}
+#box3{
+  background-color: yellow;
+}
+#box4{
+  background-color: green;
+}
