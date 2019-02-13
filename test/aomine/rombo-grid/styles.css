@@ -7,27 +7,36 @@ justify-content: center;
 align-items: center;
 }
 #box{
-  height: 100px;
-  width: 100px;
-  background-color: red;
   display: grid;
   grid-template-columns: 100px 100px;
   grid-template-rows: 100px 100px;
-  grid-gap: 5px;
+  /* grid-gap: 5px; */
   transform: rotate(45deg);
+}
+div{
+  transition: .5s;
 }
 #box1{
   background-color: red;
 }
-#box1:hover{
-  background-color: white;
+#box1:hover{ 
+  transform: scale(2) translate(25px, 25px);
 }
 #box2{
   background-color: blue;
 }
+#box2:hover{ 
+  transform: scale(2) translate(-25px, 25px);
+}
 #box3{
   background-color: yellow;
 }
+#box3:hover{ 
+  transform: scale(2) translate(25px, -25px);
+}
 #box4{
   background-color: green;
+}
+#box4:hover{ 
+  transform: scale(2) translate(-25px, -25px);
 }
