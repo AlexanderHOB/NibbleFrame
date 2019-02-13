@@ -22,28 +22,47 @@ div{
 .box1{
   background-color: red;
 }
-.box1:hover{
+/* .box1:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+} */
+.box1{
+  background-color: red;
+}
+.box1:hover{
+ transform: scale(3.2);
+ z-index: 4;
 }
 .box2{
   background-color: blue;
 }
-.box2:hover{
+/* .box2:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
-}
+} */
+.box2:hover{
+  transform: scale(3.2);
+ z-index: 4;
+ }
 .box3{
   background-color: yellow;
 }
-.box3:hover{
+/* .box3:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+} */
+.box3:hover{
+ transform: scale(3.2);
+ z-index: 4;
 }
 .box4{
   background-color: green;
 }
-.box4:hover{
+/* .box4:hover{
   grid-column: 1 / span 2;
   grid-row: 1 / span 2;
+} */
+.box4:hover{
+ transform: scale(3.2);
+ z-index: 4;
 }
