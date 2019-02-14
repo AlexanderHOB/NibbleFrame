@@ -36,14 +36,16 @@ box4.addEventListener('mouseout', ()=>{out(box4, title4, content4)});
 
 //Funciones
 function over(box, title, content){
-  box.classList.add('effect');  
-  setTimeout(()=>{
-    title.classList.add('vanished');
-    content.classList.add('vanished');
-  }, 200);
-  lineOn(title);
-  title.classList.add('block');
-  content.classList.add('block');
+  if (!title.classList.contains('block')) {
+    box.classList.add('effect');  
+    setTimeout(()=>{
+      title.classList.add('vanished');
+      content.classList.add('vanished');
+    }, 200);
+    lineOn(title);
+    title.classList.add('block');
+    content.classList.add('block');
+  }
 }
 
 function out(box, title, content){
