@@ -9,52 +9,59 @@ var line1 = document.querySelector('.line1');
 var line2 = document.querySelector('.line2');
 var wall = document.querySelector('.wall');
 
-//Box 1
-box1.addEventListener('mouseover', ()=>{over(box1)});
+var x={
+  x: true
+}
 
-wall.addEventListener('mouseout', ()=>{out(box1)});
+//Box 1
+box1.addEventListener('click', ()=>{overOut(box1)});
 
 //Box 2
-box2.addEventListener('mouseover', ()=>{over(box2)});
-
-wall.addEventListener('mouseout', ()=>{out(box2)});
+box2.addEventListener('click', ()=>{overOut(box2)});
 
 // //Box 3
-box3.addEventListener('mouseover', ()=>{over(box3)});
-
-wall.addEventListener('mouseout', ()=>{out(box3)});
+box3.addEventListener('click', ()=>{overOut(box3)});
 
 // //Box 4
-box4.addEventListener('mouseover', ()=>{over(box4)});
+box4.addEventListener('click', ()=>{overOut(box4)});
 
-wall.addEventListener('mouseout', ()=>{out(box4)});
 
 //Funciones
+function overOut(box){
+  if (x.x) {
+    over(box);
+  }else{
+    setTimeout(out(box), 1000); 
+  }
+}
+
 function over(box){
   if (!title.classList.contains('block')) {
+    x.x=false;
     box.classList.add('effect');  
-  setTimeout(()=>{
+    setTimeout(()=>{
     title.classList.add('vanished');
     content.classList.add('vanished');
-    wall.classList.add('block');
-  }, 200);
-  lineOn(box);
-  title.classList.add('block');
-  content.classList.add('block');
-  write(box);
+    }, 200);
+    lineOn(box);
+    title.classList.add('block');
+    content.classList.add('block');
+    write(box);
   }
 }
 
 function out(box){
-  box.classList.remove('effect');
-  setTimeout(()=>{
-    title.classList.remove('block');
-    content.classList.remove('block');   
-  }, 200);
-  lineOff(box);
-  wall.classList.remove('block');
-  title.classList.remove('vanished');
-  content.classList.remove('vanished');
+  if (title.classList.contains('vanished')) {
+    x.x=true;
+    box.classList.remove('effect');
+    setTimeout(()=>{
+      title.classList.remove('block');
+      content.classList.remove('block');   
+    }, 200);
+    lineOff(box);
+    title.classList.remove('vanished');
+    content.classList.remove('vanished');
+  }
 }
 
 function lineOn(box){

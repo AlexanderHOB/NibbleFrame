@@ -33,15 +33,6 @@ div{
   overflow: hidden;
   position: relative;
 }
-.wall{
-  width: 100%;
-  height: 100%;
-  /* opacity: 0; */
-  display: none;
-  position: absolute; 
-  background-color: transparent;
-  z-index: 4;
-}
 .text{
   position: absolute;
   z-index: 3;
@@ -85,7 +76,7 @@ div{
 transform: scale(3.5);
  z-index: 2;
 }
- .text .block, .block{
+ .text .block{
   display: block;
  }
  .text .vanished{
