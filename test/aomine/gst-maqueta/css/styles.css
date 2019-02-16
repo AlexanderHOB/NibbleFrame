@@ -33,6 +33,7 @@ header nav{
 	background-color: transparent;
 	position: fixed;
 	transition: all .5s ease;
+	z-index: 1;
 }
 .bg-blue{
 	background-color: #083d77;
@@ -85,7 +86,7 @@ header nav{
 	align-self: center;
 }
 /*SECTIONS*/
-#inicio, #nosotros div, #servicios, #contactanos, footer{
+#nosotros div, #servicios, #contactanos, footer{
 	height: 100vh;
 	width: 100%;
 	display: flex;
@@ -94,7 +95,50 @@ header nav{
 }
 /*INICIO*/
 #inicio{
-	background-color: #ff4c00;
+	overflow: hidden;
+}
+#inicio figure{
+	position: relative;
+	width: 500%;
+	margin: 0;
+	left: 0;
+	animation: slider 20s infinite;
+	animation-delay: 2s;
+}
+#inicio figure img{
+	width: 19.999%;
+	float: left;
+	display: block;
+	z-index: 0;
+}
+@keyframes slider{
+	0%{
+		left: 0;
+	}
+	20%{
+		left: 0;
+	}
+	25%{
+		left: -100%;
+	}
+	45%{
+		left: -100%;
+	}
+	50%{
+		left: -200%;
+	}
+	70%{
+		left: -200%;
+	}
+	75%{
+		left: -300%;
+	}
+	95%{
+		left: -300%;
+	}
+	100%{
+		left: -400%;
+	}
 }
 /*NOSOTROS*/
 #nosotros div{
