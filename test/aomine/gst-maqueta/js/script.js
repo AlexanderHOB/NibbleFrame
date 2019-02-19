@@ -27,8 +27,43 @@ window.onscroll = () => {
 		nav.classList.remove('bg-blue');
 	}
 }
+//SLIDER
+const items = document.querySelectorAll('.slide');
+const itemCount = items.length;
+const nextItem = document.querySelector('.next');
+const previousItem = document.querySelector('.previous');
+let count = 0;
 
-//Rombo
+function showNextItem() {
+  items[count].classList.remove('active');
+
+  if(count < itemCount - 1) {
+    count++;
+  } else {
+    count = 0;
+  }
+
+  items[count].classList.add('active');
+  console.log(count);
+}
+
+function showPreviousItem() {
+  items[count].classList.remove('active');
+
+  if(count > 0) {
+    count--;
+  } else {
+    count = itemCount - 1;
+  }
+
+  items[count].classList.add('active');
+  console.log(count);
+}
+
+nextItem.addEventListener('click', showNextItem);
+previousItem.addEventListener('click', showPreviousItem);
+
+//ROMBO
 //Variables
 var box1 = document.querySelector('.box1');
 var box2 = document.querySelector('.box2');
@@ -67,16 +102,16 @@ function over(box){
     box.classList.add('effect');  
     box.classList.add('index');  
     title.classList.add('x');
-  setTimeout(()=>{
-    title.classList.add('show');
-    content.classList.add('show');
-    wall.classList.add('block');
-  }, 200);
-  lineOn(box);
-  title.classList.add('block');
-  content.classList.add('block');
-  write(box);
-  vanishedOn(box);
+    setTimeout(()=>{
+      title.classList.add('show');
+      content.classList.add('show');
+      wall.classList.add('block');
+    }, 200);
+    lineOn(box);
+    title.classList.add('block');
+    content.classList.add('block');
+    write(box);
+    vanishedOn(box);
   }
 }
 
@@ -100,112 +135,112 @@ function out(box){
 function lineOn(box){
   switch(box){
     case box1:
-      line1.classList.add('bg1');
-      line2.classList.add('bg1');
-      break;
+    line1.classList.add('bg1');
+    line2.classList.add('bg1');
+    break;
     case box2:
-      line1.classList.add('bg2');
-      line2.classList.add('bg2');
-      break;
+    line1.classList.add('bg2');
+    line2.classList.add('bg2');
+    break;
     case box3:
-     line1.classList.add('bg3');
-     line2.classList.add('bg3');
-     break;
+    line1.classList.add('bg3');
+    line2.classList.add('bg3');
+    break;
     case box4:
-      line1.classList.add('bg4');
-      line2.classList.add('bg4');
-      break;
+    line1.classList.add('bg4');
+    line2.classList.add('bg4');
+    break;
   }
 }
 
 function lineOff(box){
   switch(box){
     case box1:
-      line1.classList.remove('bg1');
-      line2.classList.remove('bg1');
-      break;
+    line1.classList.remove('bg1');
+    line2.classList.remove('bg1');
+    break;
     case box2:
-      line1.classList.remove('bg2');
-      line2.classList.remove('bg2');
-      break;
+    line1.classList.remove('bg2');
+    line2.classList.remove('bg2');
+    break;
     case box3:
-     line1.classList.remove('bg3');
-     line2.classList.remove('bg3');
-      break;
+    line1.classList.remove('bg3');
+    line2.classList.remove('bg3');
+    break;
     case box4:
-     line1.classList.remove('bg4');
-     line2.classList.remove('bg4');
-     break;
+    line1.classList.remove('bg4');
+    line2.classList.remove('bg4');
+    break;
   }
 }
 
 function write(box){
   switch(box){
     case box1:
-      title.innerHTML = 'Impulsamos tu negocio';
-      content.innerHTML = 'Buscamos que tu empresa se posicione en el mercado competitivo.';
-      if (title.classList.contains('text3')) {
-        title.classList.remove('text3');
-        content.classList.remove('text3');
-      }
-      break;
+    title.innerHTML = 'Impulsamos tu negocio';
+    content.innerHTML = 'Buscamos que tu empresa se posicione en el mercado competitivo.';
+    if (title.classList.contains('text3')) {
+      title.classList.remove('text3');
+      content.classList.remove('text3');
+    }
+    break;
     case box2:
-      title.innerHTML = 'Puntualidad';
-      content.innerHTML = 'Nos caracterizamos por cumplir con los plazos de entrega del servicio proporcionado.';
-      if (title.classList.contains('text3')) {
-        title.classList.remove('text3');
-        content.classList.remove('text3');
-      }
-      break;
+    title.innerHTML = 'Puntualidad';
+    content.innerHTML = 'Nos caracterizamos por cumplir con los plazos de entrega del servicio proporcionado.';
+    if (title.classList.contains('text3')) {
+      title.classList.remove('text3');
+      content.classList.remove('text3');
+    }
+    break;
     case box3:
-      title.innerHTML = 'Fortalecemos las relaciones entre tus clientes y su marca';
-      content.innerHTML = 'Creamos y gestionamos nuevas formas de manifestar su propuesta de valor.';
-      if (title.classList.contains('text3')) {
-        title.classList.remove('text3');
-        content.classList.remove('text3');
-      }
-      break;
+    title.innerHTML = 'Fortalecemos las relaciones entre tus clientes y su marca';
+    content.innerHTML = 'Creamos y gestionamos nuevas formas de manifestar su propuesta de valor.';
+    if (title.classList.contains('text3')) {
+      title.classList.remove('text3');
+      content.classList.remove('text3');
+    }
+    break;
     case box4:
-      title.innerHTML = 'Calidad';
-      content.innerHTML = 'Cumplimos con los estándares internacionales de diseño y programación.';
-      if (!title.classList.contains('text3')) {
-        title.classList.add('text3');
-        content.classList.add('text3');
-      }
-     break;
+    title.innerHTML = 'Calidad';
+    content.innerHTML = 'Cumplimos con los estándares internacionales de diseño y programación.';
+    if (!title.classList.contains('text3')) {
+      title.classList.add('text3');
+      content.classList.add('text3');
+    }
+    break;
   }
 }
 
 function vanishedOn(box){
-   switch(box){
-    case box1:
-    imgRombo[0].classList.add('vanished');
-      break;
-    case box2:
-    imgRombo[1].classList.add('vanished');
-      break;
-    case box3:
-    imgRombo[2].classList.add('vanished');
-      break;
-    case box4:
-    imgRombo[3].classList.add('vanished');
-     break;
-  }
+ switch(box){
+  case box1:
+  imgRombo[0].classList.add('vanished');
+  break;
+  case box2:
+  imgRombo[1].classList.add('vanished');
+  break;
+  case box3:
+  imgRombo[2].classList.add('vanished');
+  break;
+  case box4:
+  imgRombo[3].classList.add('vanished');
+  break;
+}
 }
 
 function vanishedOff(box){
-   switch(box){
-    case box1:
-    imgRombo[0].classList.remove('vanished');
-      break;
-    case box2:
-      imgRombo[1].classList.remove('vanished');
-      break;
-    case box3:
-     imgRombo[2].classList.remove('vanished');
-      break;
-    case box4:
-     imgRombo[3].classList.remove('vanished');
-     break;
-  }
+ switch(box){
+  case box1:
+  imgRombo[0].classList.remove('vanished');
+  break;
+  case box2:
+  imgRombo[1].classList.remove('vanished');
+  break;
+  case box3:
+  imgRombo[2].classList.remove('vanished');
+  break;
+  case box4:
+  imgRombo[3].classList.remove('vanished');
+  break;
+}
 }
