@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    />
-  </head>
-  <body>
-    <header>
-      <nav id="nav">
-        <div class="container">
-          <a href="#inicio" class="logo">Logo</a>
-          <ul>
-            <li><a href="#inicio" class="inicio-marker active">Inicio</a></li>
-            <li>
-              <a href="#nosotros" class="nosotros-marker"
-                >Nosotros<i class="fas fa-angle-down"></i
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link
+  href="https://fonts.googleapis.com/css?family=Poppins"
+  rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+  />
+</head>
+<body>
+  <header>
+    <nav id="nav">
+      <div class="container">
+        <a href="#inicio" class="logo">GST</a>
+        <ul>
+          <li><a href="#inicio" class="inicio-marker active">Inicio</a></li>
+          <li>
+            <a href="#nosotros" class="nosotros-marker"
+            >Nosotros<i class="fas fa-angle-down"></i
               ></a>
             </li>
             <li><a href="#servicios" class="servicios-marker">Servicios</a></li>
@@ -34,32 +34,58 @@
           </ul>
         </div>
       </nav>
-      <section id="inicio">
-        <figure>
-          <img src="img/CARRUSEL-02-min.png" alt="" />
-          <img src="img/CARRUSEL_Mesa de trabajo 1-min.png" alt="" />
-          <img src="img/CARRUSEL-02-min.png" alt="" />
-          <img src="img/CARRUSEL_Mesa de trabajo 1-min.png" alt="" />
-          <img src="img/CARRUSEL-02-min.png" alt="" />
-        </figure>
+      <section id="inicio" class="inicio">
+        <img src="img/imagenes-carrusel/c1-72pp-min.png" alt="img" />
       </section>
     </header>
+
+    <!-- Nosotros -->
     <main>
-      <section id="nosotros">
-        <div id="introduccion">
-          <h4>Introducción</h4>
+        <p id="nosotros" class="ancla">ancla</p>
+      <section class="nosotros">
+        <div class="introduccion">
+          <h4 class="titleNosotros">Introducción</h4>
         </div>
-        <div id="misionVision">
+        <div class="misionVision">
           <h4>Misión Visión</h4>
         </div>
-        <div id="elegirnos">
+        <div class="elegirnos">
           <h4>¿Por qué elegirnos?</h4>
+          <div class="rombo">
+            <div class="line1"></div>
+            <div class="box">
+              <div class="wall"></div>
+              <div class="box1">
+                <img src="img/iconos-pestaña-nosotros/impulso-negocio.svg" alt="img"  class = "imgRombo" />
+              </div>
+              <div class="box2">
+                <img src="img/iconos-pestaña-nosotros/puntualidad.svg" alt="img"  class = "imgRombo" />
+              </div>
+              <div class="box3">
+                <img src="img/iconos-pestaña-nosotros/fotalezer-relaciones.svg" alt="img"  class = "imgRombo" />
+              </div>
+              <div class="box4">
+                <img src="img/iconos-pestaña-nosotros/calidad.svg" alt="img"  class = "imgRombo" />
+              </div>
+              <div class="text">
+                <h3 class="title"></h3>
+                <p class="content"></p>  
+              </div>
+            </div>
+            <div class="line2"></div>
+          </div>
         </div>
       </section>
-      <section id="servicios">
+
+      <!-- Servicios -->
+      <p id="servicios" class="ancla">ancla</p>
+      <section class="servicios">
         <h4>Servicios</h4>
       </section>
-      <section id="contactanos">
+
+      <!-- Contactanos -->
+      <p id="contactanos" class="ancla">ancla</p>
+      <section class="contactanos">
         <h4>Contactanos</h4>
       </section>
     </main>
@@ -69,4 +95,4 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="js/script.js"></script>
   </body>
-</html>
+  </html>
