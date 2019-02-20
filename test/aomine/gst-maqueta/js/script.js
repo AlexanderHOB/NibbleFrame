@@ -1,70 +1,70 @@
-//ScrollSpy
-(function(){
-	var navLinks = $('nav div ul li a'),
-	// navH = $('nav').height(),
-	navH = 100;
-	section = $('section'),
-	documentEl = $(document);
-	documentEl.on('scroll', function() {
-		var currentScrollPos = documentEl.scrollTop();
-		section.each(function(){
-			var self = $(this);
-			if ( self.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offset().top + self.outerHeight()) ) {
-				var targetCLass = '.' + self.attr('class') + '-marker';
-				navLinks.removeClass('active');
-				$(targetCLass).addClass('active');
-			}
-		});
-	});
+// ScrollSpy
+(function() {
+  var section = document.querySelectorAll('section');
+  var sections = [];
+  Array.prototype.forEach.call(section, function(e) {
+    sections[e.className] = e.offsetTop;
+  });
+  window.onscroll = () => {
+    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    for (let i in sections) {
+      if (sections[i] <= scrollPosition + 50) {
+        document.querySelector('.active').classList.remove('active');
+        document.querySelector('a[href*=' + i + ']').classList.add('active');
+      }
+    }
+  };
 })();
 
 //Cambiar color navbar
 var nav = document.getElementById('nav');
-window.onscroll = () => {
+document.onscroll = () => {
 	if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
 		nav.classList.add('bg-blue');
 	}else{
 		nav.classList.remove('bg-blue');
 	}
 }
-//SLIDER
+
+//Slider
 const items = document.querySelectorAll('.slide');
 const itemCount = items.length;
 const nextItem = document.querySelector('.next');
 const previousItem = document.querySelector('.previous');
 let count = 0;
-
+var interval = setInterval(showNextItem, 8000);
+function nxt(){
+  clearInterval(interval);
+  showNextItem();
+  interval = setInterval(showNextItem, 8000);
+}
+function pre(){
+  clearInterval(interval);
+  showPreviousItem();
+  interval = setInterval(showNextItem, 4000);
+}
 function showNextItem() {
   items[count].classList.remove('active');
-
   if(count < itemCount - 1) {
     count++;
   } else {
     count = 0;
   }
-
   items[count].classList.add('active');
-  console.log(count);
 }
-
 function showPreviousItem() {
   items[count].classList.remove('active');
-
   if(count > 0) {
     count--;
   } else {
     count = itemCount - 1;
   }
-
   items[count].classList.add('active');
-  console.log(count);
 }
-
-nextItem.addEventListener('click', showNextItem);
-previousItem.addEventListener('click', showPreviousItem);
+nextItem.addEventListener('click', nxt);
+previousItem.addEventListener('click', pre);
 
 //ROMBO
-//Variables
 var box1 = document.querySelector('.box1');
 var box2 = document.querySelector('.box2');
 var box3 = document.querySelector('.box3');
@@ -75,28 +75,14 @@ var imgRombo = document.querySelectorAll('.imgRombo');
 var line1 = document.querySelector('.line1');
 var line2 = document.querySelector('.line2');
 var wall = document.querySelector('.wall');
-
-//Box 1
 box1.addEventListener('mouseover', ()=>{over(box1)});
-
 wall.addEventListener('mouseout', ()=>{out(box1)});
-
-//Box 2
 box2.addEventListener('mouseover', ()=>{over(box2)});
-
 wall.addEventListener('mouseout', ()=>{out(box2)});
-
-// //Box 3
 box3.addEventListener('mouseover', ()=>{over(box3)});
-
 wall.addEventListener('mouseout', ()=>{out(box3)});
-
-// //Box 4
 box4.addEventListener('mouseover', ()=>{over(box4)});
-
 wall.addEventListener('mouseout', ()=>{out(box4)});
-
-//Funciones
 function over(box){
   if (!title.classList.contains('block') && !title.classList.contains('x')) {
     box.classList.add('effect');  
@@ -114,7 +100,6 @@ function over(box){
     vanishedOn(box);
   }
 }
-
 function out(box){
   box.classList.remove('effect');
   setTimeout(()=>{
@@ -131,7 +116,6 @@ function out(box){
   content.classList.remove('show');
   vanishedOff(box);
 }
-
 function lineOn(box){
   switch(box){
     case box1:
@@ -152,7 +136,6 @@ function lineOn(box){
     break;
   }
 }
-
 function lineOff(box){
   switch(box){
     case box1:
@@ -173,7 +156,6 @@ function lineOff(box){
     break;
   }
 }
-
 function write(box){
   switch(box){
     case box1:
@@ -210,7 +192,6 @@ function write(box){
     break;
   }
 }
-
 function vanishedOn(box){
  switch(box){
   case box1:
@@ -227,7 +208,6 @@ function vanishedOn(box){
   break;
 }
 }
-
 function vanishedOff(box){
  switch(box){
   case box1:
