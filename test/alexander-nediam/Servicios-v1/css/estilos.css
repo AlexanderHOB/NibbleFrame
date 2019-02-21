@@ -97,8 +97,8 @@ body {
 .servicio-t {
   padding-right: 40px;
   color: #69995d;
-  -ms-grid-columns: 2fr 1fr;
-  grid-template-columns: 2fr 1fr; }
+  -ms-grid-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr; }
   .servicio-t h4 {
     padding: 0 200px 0 0; }
 
