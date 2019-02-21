@@ -1,14 +1,15 @@
 // ScrollSpy
 (function() {
-  var section = document.querySelectorAll('section');
-  var sections = [];
+  var section = document.querySelectorAll('section'),
+  sections = [],
+  navH = document.querySelectorAll('nav');
   Array.prototype.forEach.call(section, function(e) {
     sections[e.className] = e.offsetTop;
   });
-  window.onscroll = () => {
+  document.onscroll = () => {
     var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
     for (let i in sections) {
-      if (sections[i] <= scrollPosition + 50) {
+      if (sections[i] <= scrollPosition + navH[0].clientHeight) {
         document.querySelector('.active').classList.remove('active');
         document.querySelector('a[href*=' + i + ']').classList.add('active');
       }
@@ -18,7 +19,7 @@
 
 //Cambiar color navbar
 var nav = document.getElementById('nav');
-document.onscroll = () => {
+window.onscroll = () => {
 	if(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200){
 		nav.classList.add('bg-blue');
 	}else{

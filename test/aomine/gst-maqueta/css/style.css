@@ -203,96 +203,91 @@ header nav{
 	grid-gap: 30px;
 	margin-bottom: 70px;
 }
-/* cardMV */
+/* cardMV  */
 .nosotros .misionVision .cardMV{
-	position: relative;
-	width: calc(400px - 30px);
-	height: calc(300px - 30px);
-	background: #000;
-	float: left;
-	margin: 15px;
-	box-sizing: border-box;
+	width: 350px;
+	height: 200px;
 	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	transition: all 0.3s;
 	border-radius: 20px;
-}
-.nosotros .misionVision .cardMV .icon{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #f00;
-	transition: 0.5s;
-	z-index: 1;
-}
-.nosotros .misionVision .cardMV:hover .icon{
-	top: 20px;
-	left: calc(50% - 40px);
-	width: 80px;
-	height: 80px;
-	border-radius: 50px;
-}
-.nosotros .misionVision .cardMV .icon object{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 50%;
-	transition: 0.5s;
-}
-.nosotros .misionVision .cardMV:hover .icon object{
-	width: 65%;
-}
-.nosotros .misionVision .cardMV .contents{
-	position: absolute;
-	top: 100%;
-	height: calc(100% - 100px);
-	padding: 20px;
-	box-sizing: border-box;
-	transition: 0.5s;
-	opacity: 0;
-	width: 100%;
-}
-.nosotros .misionVision .cardMV:hover .contents{
-	top: 85px;
-	opacity: 1;
-}
-.nosotros .misionVision .cardMV .contents h3{
-	margin: 0 0 2px;
-	padding: 0;
-	color: #fff;
-	font-size: 24px;
-	text-align: center;
-}
-.nosotros .misionVision .cardMV .contents p{
-	margin: 0;
-	padding: 0;
-	color: #fff;
-	font-size: 14px;
-}
-.nosotros .misionVision .cardMV .contents ul li{
-	margin: 0;
-	padding: 0;
-	color: #fff;
-	font-size: 14.5px;
-}
-.nosotros .misionVision .cardMV:nth-child(1) .icon{
-	background: #319635;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .nosotros .misionVision .cardMV:nth-child(1){
 	background: #4caf50;
 }
-.nosotros .misionVision .cardMV:nth-child(2) .icon{
-	background: #d03852;
-}
 .nosotros .misionVision .cardMV:nth-child(2){
 	background: #f54967;
 }
-.nosotros .misionVision .cardMV:nth-child(3) .icon{
-	background: #23798e;
-}
 .nosotros .misionVision .cardMV:nth-child(3){
 	background: #328fa5;
+}
+.nosotros .misionVision .cardMV object{
+	width: 30%;
+	transition: all 0.5s;
+	display: block;
+}
+.nosotros .misionVision .cardMV:hover object{
+	transform: scale(1.6) rotate(0deg);
+}
+.nosotros .misionVision .cardMV:hover{
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.nosotros .misionVision .cardMV .contents{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 80%;
+	color: #fff;
+	z-index: 2;
+	transition: all 0.6s cubic-bezier(1,0,0,1);
+	border: 1px solid #fff;
+	background: #000;
+	padding: 6px;
+}
+.nosotros .misionVision .cardMV .contents h3{
+	text-align: center;
+	padding-bottom: 4px;
+	font-size: 14px;
+}
+.nosotros .misionVision .cardMV .contents p{
+	font-size: 12px;
+}
+.nosotros .misionVision .cardMV .contents ul li{
+	font-size: 12px;
+}
+.nosotros .misionVision .cardMV:hover .contents{
+	transform: translate(-50%, -50%) scale(1);
+}
+.nosotros .misionVision .cardMV:before,
+.nosotros .misionVision .cardMV:after{
+	content: '';
+	width: 350px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.6;
+	transition: all 0.6s cubic-bezier(1,0,0,1);
+	border: 2.5px solid #fff;
+	z-index: 1;
+}
+.nosotros .misionVision .cardMV:before{
+	transform: rotate(45deg) translateY(-400px) translateX(0);
+}
+.nosotros .misionVision .cardMV:after{
+	transform: rotate(45deg) translateY(400px) translateX(-60px);
+}
+.nosotros .misionVision .cardMV:hover:before{
+	transform: rotate(45deg) translateY(-195px) translateX(0);
+}
+.nosotros .misionVision .cardMV:hover:after{
+	transform: rotate(45deg) translateY(120px) translateX(-60px);
 }
 /*Porque elegirnos*/
 .nosotros .elegirnos{
