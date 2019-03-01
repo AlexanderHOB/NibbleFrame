@@ -189,6 +189,35 @@
 		<p id="contactanos" class="ancla">ancla</p>
 		<section class="contactanos">
 			<h4>Contactanos</h4>
+			<div class="container">
+				<div class="map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.718306419362!2d-75.19957546660406!3d-12.06288467080942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910e97b4e6c8079d%3A0x6d67d35b8b4d834c!2sAv.+Gir%C3%A1ldez+1059%2C+Huancayo+12000!5e0!3m2!1ses!2spe!4v1551455013857" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+				<div class="form">
+					<h4>Form</h4>
+					<form action="consulta.php" method="POST" autocomplete="off">
+						<div class="inputBox">
+							<input type="text" name="nombre" id="nombre" required>
+							<label for="nombre">Nombre</label>
+						</div>
+						<div class="inputBox">
+							<input type="text" name="email" id="email" required>
+							<label for="telefono">Correo</label>
+						</div>
+						<div class="inputBox">
+							<input type="tel" name="telefono" id="telefono" required>
+							<label for="telefono">Telefono</label>
+						</div>
+						<div class="textArea">
+							<label for="mensaje">Mensaje</label>
+							<textarea name="mensaje" id="mensaje" class="form-text" required></textarea>
+						</div>						
+						<div class="btn-form">
+							<button type="submit">Submit</button>
+						</div>
+					</form>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer>
