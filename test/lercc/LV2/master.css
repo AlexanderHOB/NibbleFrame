@@ -7,13 +7,23 @@ body{
 }
 .brand{
   position: absolute;
+  display: flex;
   top:50%;
   left:50%;
   transform:translate(-50%,  -50%);
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
 }
 svg#marca{
   display: block;
-  transform: scale(2.5);
+  transform: scale(1);
+  border:1px solid green;
+  overflow: visible;
+  height: 100%;
+  width: 100%;
 }
 .st0{fill:none;stroke:#none;stroke-width:2;stroke-miterlimit:10;}
 .st1{fill:#fff;stroke:#fff;}
@@ -39,10 +49,32 @@ g#isotipo_2_ > path{
     opacity: 1;
     fill:rgba(255, 255, 255, 0) ;
   }
-    90%,100%{
+    100%{
     opacity:1;
     fill: rgba(255, 255, 255, 1);
     stroke-dashoffset:0;
+  }
+}
+g#isotipo_2_ > path#fig1{
+  stroke-dasharray:815  ;
+  transform-origin:25.29% 24.53%;
+  animation: fig1 6s cubic-bezier(0,1.05,1,.88) infinite;
+}
+@keyframes fig1 {
+30%{
+    transform: rotate(-270deg);
+
+  }
+
+}
+g#isotipo_2_ > path#fig2{
+  stroke-dasharray:815  ;
+  transform-origin:23.6% 73.9%;
+  animation: fig2 6s cubic-bezier(0,1.05,1,.88) infinite;
+}
+@keyframes fig2 {
+  10%, 30%{
+    transform: rotate(-250deg);
   }
 }
 /*animacion del logotipo_1_1_*/
@@ -61,7 +93,7 @@ g#logotipo_1_1_ > path{
     opacity: 0.8;
     stroke-dashoffset:400 ;
   }
-  80%{
+  89%{
     opacity: 1;
     fill:rgba(255, 255, 255, 0) ;
   }
@@ -97,8 +129,4 @@ g#logotipo_2_1_ > path{
     stroke-dashoffset:0;
   }
 }
-/*oculando la pinche flecha que
- no quiere cambiar su color >:x  */
-g#flecha_2_ > path,polygon{
-  visibility: hidden;
-}
+  

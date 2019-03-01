@@ -2,22 +2,20 @@
 *{
 	margin: 0;
 	scroll-behavior: smooth;
+	box-sizing: border-box;
 }
 body{
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
-	-webkit-font-smoothing: antialiased
+	-webkit-font-smoothing: antialiased;
 }
 a{
 	text-decoration: none;
 }
 h4{
-	color: #fff;
-	font-size: 50px;
+	color: #262626;
+	font-size: 3em;
 	text-align: center;
-	padding-top: 30px;
-}
-.titleNosotros{
 	padding-top: 30px;
 }
 /*scroll*/
@@ -32,6 +30,12 @@ body::-webkit-scrollbar-thumb{
 	border-radius: 8px;
 	background-color: rgba(0, 0, 0, .3);
 }
+.transition{
+	transition: all 0.5s ease;
+}
+.bg-oscuro{
+	background-color: rgba(0, 0, 0, 0.4);
+}
 /*ancla*/
 .ancla{
 	color: transparent;
@@ -40,16 +44,17 @@ body::-webkit-scrollbar-thumb{
 	transform: translateY(-40px);
 }
 /*NAV*/
-header nav{
+header #nav{
 	width: 100%;
 	background-color: rgba(0, 0, 0, .3);
 	position: fixed;
-	transition: all .5s ease;
+	top: 0;
+	transition: all .3s ease;
 	z-index: 2;
 }
-.bg-blue{
+#nav.bg-blue{
 	background-color: #083d77;
-	box-shadow:0 0 .5em RGBA(0,0,0,.5);
+	box-shadow:0 0 .5em rgba(0,0,0,.5);
 }
 #nav .container{
 	width: 80%;
@@ -61,7 +66,6 @@ header nav{
 #nav .logo{
 	color: #fff;
 	font-size: 32px;
-	padding: 5px 0;
 }
 #nav ul{
 	display: flex;
@@ -72,11 +76,14 @@ header nav{
 #nav ul li a{
 	font-size: 16px;
 	display: inline-block;
-	margin: 0 10px;
+	margin: 10px;
 	color: rgba(255, 255, 255, .5);
-	transition: all .5s ease;
+	transition: all .3s ease;
 }
-#nav ul li .active{
+#nav ul li a:hover{
+	color: #fff;
+}
+#nav ul li a.active{
 	color: #fff;
 	position: relative;
 }
@@ -96,7 +103,101 @@ header nav{
 #nav ul li:nth-of-type(2) a i{
 	margin-left: 4px;
 	margin-top: 2px;
-	align-self: center;
+}
+#nav ul li:hover:nth-of-type(2) a i{
+	transform: rotate(180deg);
+}
+#nav ul li:nth-of-type(2) ul{
+	position: absolute;
+	top: 99%;
+	background-color: rgba(0, 0, 0, .3);
+	display: none;
+	padding: 0;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;		
+}
+#nav ul li:hover:nth-of-type(2) ul{
+	display: block;
+}
+#nav ul li:nth-of-type(2) ul.bgBlue{
+	background-color: #083d77;
+	box-shadow:0 0 1px rgba(0,0,0,.5);
+}
+/*Responsive nav*/
+.menu-toggle{
+	position: fixed;
+	top: 0;
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-top: 12px;
+	z-index: 2;
+}
+.menu-toggle i{
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+}
+header #push{
+	background-color: #fff;
+}
+#push .container{
+	padding: 0 20px;	
+}
+#push .navTitle{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#push .navTitle .logo{
+	color: #262626;
+	font-size: 32px;
+	display: inline-block;
+	padding-top: 8px;
+}
+#push .navTitle i{
+	color: #262626;
+	cursor: pointer;
+}
+#push ul{
+	padding: 0;
+}
+#push ul li{
+	list-style: none;
+}
+#push ul li a{
+	display: block;
+	text-decoration: none;
+	color: #aaa;
+	padding: 10px 5px;
+	transition: all .3s ease;
+}
+#push ul li a:hover{
+	color: #262626;
+}
+#push ul li a.activePush{
+	color: #262626;
+}
+#push ul li:nth-of-type(2) a{
+	display: flex;
+}
+#push ul li:nth-of-type(2) a i{
+	margin-left: 8px;
+	margin-top: 2px;
+}
+#push ul li:hover:nth-of-type(2) a i{
+	transform: rotate(180deg);
+}
+#push ul li:nth-of-type(2) ul{
+	height: 0;
+	overflow: hidden;
+	transition: all .3s linear;
+	padding-left: 20px;
+}
+#push ul li:hover:nth-of-type(2) ul{
+	height: 100%;
 }
 /*SECTIONS*/
 .servicios, .contactanos, footer{
@@ -174,44 +275,48 @@ header nav{
 }
 /*INTRODUCCIÓN*/
 .nosotros .introduccion{
-	background-color: #394648;
+	background-color: #e3dfff;
 	height: 500px;
 	width: 100%;
 }
 /*Mision Vision*/
 .nosotros .misionVision{
-	background-color: #69995d;
+	background-color: #e3dfff;
 	width: 100%;
 	height: 100%;.
 }
 .nosotros .misionVision .container{
+	width: 90%;
+	margin: 50px auto;
+	display: grid;
+	grid-gap: 30px;
+}
+.nosotros .misionVision .mision, .nosotros .misionVision .vision, .nosotros .misionVision .valores, .nosotros .misionVision .objetivos, .nosotros .misionVision .politicas{
 	width: 100%;
-	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-.nosotros .misionVision .card1{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	justify-items: center;
-	grid-gap: 30px;
-	margin-top: 50px;
-	margin-bottom: 30px;
+.nosotros .misionVision .mision{
+	grid-area: mision;
 }
-.nosotros .misionVision .card2{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	justify-items: center;
-	grid-gap: 30px;
-	margin-bottom: 70px;
+.nosotros .misionVision .vision{
+	grid-area: vision;
 }
+.nosotros .misionVision .valores{
+	grid-area: valores;
+}
+.nosotros .misionVision .objetivos{
+	grid-area: objetivos;
+}
+.nosotros .misionVision .politicas{
+	grid-area: politicas;
+}
+/* fin de responsive ---------------------------------- */
 /* cardMV */
 .nosotros .misionVision .cardMV{
 	position: relative;
-	width: calc(400px - 30px);
-	height: calc(300px - 30px);
-	background: #000;
-	float: left;
-	margin: 15px;
-	box-sizing: border-box;
 	overflow: hidden;
 	border-radius: 20px;
 }
@@ -221,8 +326,7 @@ header nav{
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #f00;
-	transition: 0.5s;
+	transition: all 0.5s ease;
 	z-index: 1;
 }
 .nosotros .misionVision .cardMV:hover .icon{
@@ -230,7 +334,7 @@ header nav{
 	left: calc(50% - 40px);
 	width: 80px;
 	height: 80px;
-	border-radius: 50px;
+	border-radius: 50%;
 }
 .nosotros .misionVision .cardMV .icon object{
 	position: absolute;
@@ -246,85 +350,103 @@ header nav{
 .nosotros .misionVision .cardMV .contents{
 	position: absolute;
 	top: 100%;
-	height: calc(100% - 100px);
-	padding: 20px;
-	box-sizing: border-box;
-	transition: 0.5s;
-	opacity: 0;
 	width: 100%;
+	padding: 20px;
+	transition: all 0.5s ease;
+	opacity: 0;
 }
 .nosotros .misionVision .cardMV:hover .contents{
-	top: 85px;
+	top: 90px;
 	opacity: 1;
 }
 .nosotros .misionVision .cardMV .contents h3{
-	margin: 0 0 2px;
-	padding: 0;
+	margin: 0 0 5px;
 	color: #fff;
-	font-size: 24px;
+	font-size: 1.375em;
 	text-align: center;
 }
 .nosotros .misionVision .cardMV .contents p{
-	margin: 0;
-	padding: 0;
 	color: #fff;
-	font-size: 14px;
+	font-size: .875em;
+	height: 100%;
+	text-align: center;
 }
 .nosotros .misionVision .cardMV .contents ul li{
-	margin: 0;
-	padding: 0;
 	color: #fff;
-	font-size: 14.5px;
+	font-size: .875em;
 }
-.nosotros .misionVision .cardMV:nth-child(1) .icon{
+.scroll{
+	overflow-y: scroll;
+	height: 100%;
+}
+.scroll::-webkit-scrollbar{
+	width: 10px;
+}
+.scroll::-webkit-scrollbar-track{
+	background-color: transparent;
+}
+.scroll::-webkit-scrollbar-thumb{
+	border-radius: 8px;
+	background-color: rgba(0, 0, 0, .2);
+}
+.nosotros .misionVision .mision .cardMV .icon{
 	background: #319635;
 }
-.nosotros .misionVision .cardMV:nth-child(1){
+.nosotros .misionVision .mision .cardMV{
 	background: #4caf50;
 }
-.nosotros .misionVision .cardMV:nth-child(2) .icon{
-	background: #d03852;
+.nosotros .misionVision .vision .cardMV .icon{
+	background: #f16a6a;
 }
-.nosotros .misionVision .cardMV:nth-child(2){
-	background: #f54967;
+.nosotros .misionVision .vision .cardMV{
+	background: #ff758d;
 }
-.nosotros .misionVision .cardMV:nth-child(3) .icon{
+.nosotros .misionVision .valores .cardMV .icon{
 	background: #23798e;
 }
-.nosotros .misionVision .cardMV:nth-child(3){
-	background: #328fa5;
+.nosotros .misionVision .valores .cardMV{
+	background: #3b9eb5;
+}
+.nosotros .misionVision .objetivos .cardMV .icon{
+	background: #e4591e;
+}
+.nosotros .misionVision .objetivos .cardMV{
+	background: #fd753b;
+}
+.nosotros .misionVision .politicas .cardMV .icon{
+	background: #f9c500;
+}
+.nosotros .misionVision .politicas .cardMV{
+	background: #ffd32b;
+}
+.nosotros .misionVision .politicas .cardMV .contents h3, .nosotros .misionVision .politicas .cardMV .contents p{
+	color: #343a40;
 }
 /*Porque elegirnos*/
 .nosotros .elegirnos{
-	background-color: #181a1e;
+	background-color: #e3dfff;
 	height: 100%;
 }
 .nosotros .elegirnos .rombo{
-	height: 100vh;
+	margin: 150px 0;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
-	justify-content: center;
-	align-content: center;
+
 	justify-items: center;
 	align-items: center;
 }
 .nosotros .elegirnos .rombo *{
 	transition: all .5s ease;
-	border-radius: 20px; 
 	cursor: pointer;
 }
 .nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
-	width: 60%;
-	height: 4px;
-	background-color: #181a1e;
+	background-color: #e3dfff;
 }
 .nosotros .elegirnos .box{
-	width: 350px;
-	height: 350px;
 	display: grid;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto auto;
-	grid-gap: 5px;
+	grid-gap: 8px;
 	transform: rotate(45deg);
 	overflow: hidden;
 	position: relative;
@@ -349,14 +471,17 @@ header nav{
 .nosotros .elegirnos .text h3{
 	margin: 0;
 	color: #F4F4F8;
+	font-size: 1.2em;
 	transition: all .2s ease;
 	opacity: 0;
 	display: none;
 	padding-bottom: 4px;
+	text-transform: uppercase;
 }
 .nosotros .elegirnos .text p{
 	margin: 0;
 	color: rgba(255, 255, 255, .6);
+	font-size: 1em;
 	transition: all .2s ease;
 	opacity: 0;
 	display: none;
@@ -382,8 +507,8 @@ header nav{
 	background-color: #FDE74C;
 }
 .nosotros .elegirnos .box .imgRombo{
-	width: 100px;
-	height: 100px;
+	width: 50%;
+	height: 50%;
 	transition: all .5s ease;
 	transform: rotate(-45deg);
 }
@@ -401,7 +526,7 @@ header nav{
 }
 .nosotros .elegirnos .box .vanished{
 	opacity: 0;
-	transform: rotate(180deg) scale(.1);
+	transform: rotate(-45deg) scale(.1);
 }
 .nosotros .elegirnos .bg1{
 	background-color: #C3423F;
@@ -419,16 +544,155 @@ header nav{
 .servicios{
 	background-color: #e3dfff;
 }
-.servicios h4{
-	color: #262626;
-}
 /*CONTACTANOS*/
 .contactanos{
-	background-color: #012a36;
+	background-color: #e3dfff;
 }
 /*FOOTER*/
 footer{
 	height: 200px;
 	background-color: #181a1e;
+}
+footer h4{
+	color: #fff;
+}
 
+/* map y form responsive -----------------------------------------*/
+/* Extra Small x-s */
+@media ( min-width : 320px ) {     
+	/*general*/
+	body{
+		font-size: 10px;
+	}
+	/*nav*/
+	#nav ul{
+		display: none;
+	}
+	.menu-toggle i{
+		display: block;
+	}
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(5, auto) / repeat(2, auto);
+		grid-template-areas: "mision mision" "vision vision" "valores valores" "objetivos objetivos" "politicas politicas";
+	}
+	.nosotros .misionVision .cardMV{
+		width: 270px;
+		height: 270px;
+	}
+	.nosotros .misionVision .cardMV .contents{
+		font-size: 13.5px;
+		height: calc(100% - 130px);
+	}
+	/*rombo*/
+	.nosotros .elegirnos .rombo *{
+		border-radius: 10px; 
+	}
+	.nosotros .elegirnos .box{
+		grid-gap: 5px;
+	}
+	.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+		width: 0;
+		height: 0;
+	}
+	.nosotros .elegirnos .box{
+		width: 200px;
+		height: 200px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 11px;
+	}
+}
+/* Small - sm */
+@media ( min-width : 576px ) { 
+	/*general*/
+	body{
+		font-size: 16px;
+	}
+	/*mv*/
+	.nosotros .misionVision .cardMV{
+		width: 370px;
+		height: 270px;
+	}
+	.nosotros .misionVision .cardMV .contents{
+		font-size: 16px;
+		height: calc(100% - 130px);
+	}
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 300px;
+		height: 300px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 12px;
+	}
+}
+/* Medium -md (punto de interrupción) */
+@media (min-width: 768px) {  
+	/*nav*/
+	#nav ul{
+		display: flex;
+	}
+	.menu-toggle i{
+		display: none;
+	}
+	/*mv*/
+	.nosotros .elegirnos .box{
+		width: 350px;
+		height: 350px;
+	}
+	/*rombo*/
+	.nosotros .elegirnos .rombo *{
+		border-radius: 20px; 
+	}
+	.nosotros .elegirnos .box{
+		grid-gap: 8px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 14px;
+	}
+}
+/* Large - lg */
+@media ( min-width : 992px ) {  
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(3, auto) / repeat(4, auto);
+		grid-template-areas: "mision mision vision vision" "valores valores objetivos objetivos" ". politicas politicas .";
+	}  
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 300px;
+		height: 300px;
+	}
+	.nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
+		width: 60%;
+		height: 4px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 15px;
+	}
+}
+/* Extra Large - xl */
+@media ( min-width : 1200px ) { 
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 350px;
+		height: 350px;
+	}
+	.nosotros .elegirnos .text{
+		font-size: 16px;
+	}
+}
+/* Extra Large - xl */
+@media ( min-width : 1300px ) {  
+	/*rombo*/
+	.nosotros .elegirnos .box{
+		width: 400px;
+		height: 400px;
+	}
+	/*mv*/
+	.nosotros .misionVision .container{
+		grid-template: repeat(2, auto) / repeat(6, auto);
+		grid-template-areas: "mision mision vision vision valores valores" ". objetivos objetivos politicas politicas .";
+	}
 }
