@@ -200,7 +200,7 @@ header #push{
 	height: 100%;
 }
 /*SECTIONS*/
-.servicios, .contactanos, footer{
+.servicios, footer{
 	height: 100vh;
 	width: 100%;
 }
@@ -547,6 +547,108 @@ header #push{
 /*CONTACTANOS*/
 .contactanos{
 	background-color: #e3dfff;
+	height: 100%;
+}
+.contactanos .container{
+	width: 1140px;	
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;	
+	grid-template: auto / repeat(2, auto);
+	justify-items: center;
+}
+.contactanos .map, .contactanos .form{
+	width: 400px;
+	height: 600px;
+	margin: 50px 0 100px;
+	overflow: hidden;
+	border-radius: 20px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, .5);
+}
+.contactanos .map iframe{
+	width: 400px;
+	height: 600px;
+}
+.contactanos .form {
+	padding: 40px;
+	background-color: rgba(0, 0, 0, .8);
+}
+.contactanos .form h4{
+	margin: 0 0 30px;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 2em;
+}
+.contactanos .form .inputBox,
+.contactanos .form .textArea{
+	position: relative
+}
+.contactanos .form .inputBox input{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 1em;
+	color: #fff;
+	margin-bottom: 30px;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	outline: 0;
+	background-color: transparent
+}
+.contactanos .form .textArea textarea {
+	width: 100%;
+	height: 8em;
+	padding: .3em;
+	font-size: 1em;
+	color: #fff;
+	margin-bottom: 30px;
+	border: 0;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	outline: 0;
+	background-color: transparent;
+	font-family: inherit;
+}
+.contactanos .form .inputBox label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	font-size: 1em;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s
+}
+.contactanos .form .textArea label {
+	padding: 10px 0;
+	font-size: 1em;
+	color: #fff;
+	pointer-events: none
+}
+.contactanos .form .inputBox input:focus~label,
+.contactanos .form .inputBox input:valid~label{
+	top: -18px;
+	left: 0;
+	color: #03a9f4;
+	font-size: 12px
+}
+.contactanos .form .btn-form{
+	display: flex;
+	justify-content: center;
+}
+.contactanos .form .btn-form button{
+	border: none;
+	outline: none;
+	padding: 8px;
+	font-family: inherit;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #007bff;
+	color: #fff;
+	transition: .5s;
+}
+.contactanos .form .btn-form button:hover{
+	background-color: #0069d9;
 }
 /*FOOTER*/
 footer{
