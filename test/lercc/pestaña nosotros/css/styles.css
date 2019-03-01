@@ -188,12 +188,12 @@ header nav{
 	align-items: center;
 }
 /*propiedades del svg1*/
-.st60{fill:none;stroke:#FF0000;stroke-width:2;stroke-miterlimit:10;}
-.st61{fill:none;stroke:#F69F1F;stroke-miterlimit:10;}
+.st60{fill:#262626;}
+.st61{fill:none;stroke:#083D77;stroke-width:2;stroke-miterlimit:10;}
 /*propiedades del svg2*/
-.st0{fill:none;stroke:#FF0000;stroke-width:2;stroke-miterlimit:10;}
+.st0{fill:none;stroke:#083D77;stroke-width:2;stroke-miterlimit:10;}
 .st1{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-miterlimit:10;}
-.st2{fill:#FFFFFF;}
+.st2{fill:#262626;}
 .st3{fill:#544741;}
 .st4{fill:#183043;}
 .st5{fill:#F6C09C;stroke:#DD8D78;stroke-width:3;stroke-miterlimit:10;}
