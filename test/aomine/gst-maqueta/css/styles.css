@@ -43,6 +43,21 @@ body::-webkit-scrollbar-thumb{
 	font-size: 0;
 	transform: translateY(-40px);
 }
+/*Loading*/
+.loading{
+	width: 100%;
+	height: 100vh;
+	background-color: #000;
+	z-index: 99999999;
+	position: fixed;
+	transition: 2s;
+}
+.loadingOpacity{
+	opacity: 0;
+}
+.loadingGhost{
+	display: none;
+}
 /*NAV*/
 header #nav{
 	width: 100%;
@@ -50,7 +65,7 @@ header #nav{
 	position: fixed;
 	top: 0;
 	transition: all .3s ease;
-	z-index: 2;
+	z-index: 8;
 }
 #nav.bg-blue{
 	background-color: #083d77;
@@ -133,7 +148,7 @@ header #nav{
 	justify-content: flex-end;
 	align-items: center;
 	padding-top: 12px;
-	z-index: 2;
+	z-index: 8;
 }
 .menu-toggle i{
 	color: #fff;
@@ -431,7 +446,6 @@ header #push{
 	margin: 150px 0;
 	display: grid;
 	grid-template-columns: 1fr auto 1fr;
-
 	justify-items: center;
 	align-items: center;
 }
@@ -440,16 +454,15 @@ header #push{
 	cursor: pointer;
 }
 .nosotros .elegirnos .line1, .nosotros .elegirnos .line2{
-	background-color: #e3dfff;
+	background-color: transparent;
 }
 .nosotros .elegirnos .box{
 	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto;
+	grid-template: 1fr 1fr / 1fr 1fr;
 	grid-gap: 8px;
+	transform-origin: center;	
 	transform: rotate(45deg);
 	overflow: hidden;
-	position: relative;
 }
 .nosotros .elegirnos .wall{
 	width: 100%;
@@ -462,11 +475,12 @@ header #push{
 .nosotros .elegirnos .text{
 	position: absolute;
 	width: 80%;
-	z-index: 3;
+	z-index: 2;
 	left: 50%;
 	top: 50%; 
 	transform: translate(-50%, -50%) rotate(-45deg);
 	text-align: center;
+	display: none;
 }
 .nosotros .elegirnos .text h3{
 	margin: 0;
@@ -550,19 +564,15 @@ header #push{
 	height: 100%;
 }
 .contactanos .container{
-	width: 1140px;	
+	width: 90%;	
 	margin-right: auto;
 	margin-left: auto;
 	display: grid;	
-	grid-template: auto / repeat(2, auto);
 	justify-items: center;
 }
 .contactanos .map, .contactanos .form{
-	width: 400px;
-	height: 600px;
 	margin: 50px 0 100px;
 	overflow: hidden;
-	border-radius: 20px;
 	box-shadow: 0 0 12px rgba(0, 0, 0, .5);
 }
 .contactanos .map iframe{
@@ -704,6 +714,15 @@ footer h4{
 	.nosotros .elegirnos .text{
 		font-size: 11px;
 	}
+	/*contactanos*/
+	.contactanos .container{
+		grid-template: repeat(2, auto) / auto;
+	}
+	.contactanos .map, .contactanos .form{
+		width: 280px;
+		height: 500px;
+		border-radius: 20px;
+	}
 }
 /* Small - sm */
 @media ( min-width : 576px ) { 
@@ -727,6 +746,14 @@ footer h4{
 	}
 	.nosotros .elegirnos .text{
 		font-size: 12px;
+	}
+	/*contactanos*/
+	.contactanos .container{
+		grid-template: repeat(2, auto) / auto;
+	}
+	.contactanos .map, .contactanos .form{
+		width: 400px;
+		height: 600px;
 	}
 }
 /* Medium -md (punto de interrupción) */
@@ -753,6 +780,7 @@ footer h4{
 	.nosotros .elegirnos .text{
 		font-size: 14px;
 	}
+	
 }
 /* Large - lg */
 @media ( min-width : 992px ) {  
@@ -772,6 +800,10 @@ footer h4{
 	}
 	.nosotros .elegirnos .text{
 		font-size: 15px;
+	}
+	/*contactanos*/
+	.contactanos .container{
+		grid-template: auto /  repeat(2, auto);
 	}
 }
 /* Extra Large - xl */

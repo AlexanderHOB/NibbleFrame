@@ -1,3 +1,11 @@
+//Incio de loading
+// var loading = document.querySelector('.loading');
+// window.onload = () => {
+//     loading.classList.add('loadingOpacity');
+//     setTimeout(()=>{
+//       loading.classList.add('loadingGhost');
+//     }, 500);
+// };
 // ScrollSpy
 (function() {
   var section = document.querySelectorAll('section'),
@@ -95,14 +103,32 @@ var imgRombo = document.querySelectorAll('.imgRombo');
 var line1 = document.querySelector('.line1');
 var line2 = document.querySelector('.line2');
 var wall = document.querySelector('.wall');
-box1.addEventListener('mouseover', ()=>{over(box1)});
-wall.addEventListener('mouseout', ()=>{out(box1)});
-box2.addEventListener('mouseover', ()=>{over(box2)});
-wall.addEventListener('mouseout', ()=>{out(box2)});
-box3.addEventListener('mouseover', ()=>{over(box3)});
-wall.addEventListener('mouseout', ()=>{out(box3)});
-box4.addEventListener('mouseover', ()=>{over(box4)});
-wall.addEventListener('mouseout', ()=>{out(box4)});
+var text = document.querySelector('.text');
+const mediumBp = matchMedia('(min-width: 768px)'); 
+const changeSize = mql => {
+  if(mql.matches){
+   box1.addEventListener('mouseover', ()=>{over(box1)});
+   wall.addEventListener('mouseout', ()=>{out(box1)});
+   box2.addEventListener('mouseover', ()=>{over(box2)});
+   wall.addEventListener('mouseout', ()=>{out(box2)});
+   box3.addEventListener('mouseover', ()=>{over(box3)});
+   wall.addEventListener('mouseout', ()=>{out(box3)});
+   box4.addEventListener('mouseover', ()=>{over(box4)});
+   wall.addEventListener('mouseout', ()=>{out(box4)});
+ }else{
+  box1.addEventListener('mouseover', ()=>{overTwo(box1)});
+  box1.addEventListener('mouseout', ()=>{out(box1)});
+  box2.addEventListener('mouseover', ()=>{overTwo(box2)});
+  box2.addEventListener('mouseout', ()=>{out(box2)});
+  box3.addEventListener('mouseover', ()=>{overTwo(box3)});
+  box3.addEventListener('mouseout', ()=>{out(box3)});
+  box4.addEventListener('mouseover', ()=>{overTwo(box4)});
+  box4.addEventListener('mouseout', ()=>{out(box4)});
+}
+}
+mediumBp.addListener(changeSize);
+changeSize(mediumBp);
+
 function over(box){
   if (!title.classList.contains('block') && !title.classList.contains('x')) {
     box.classList.add('effect');  
@@ -114,6 +140,23 @@ function over(box){
       wall.classList.add('block');
     }, 200);
     lineOn(box);
+    text.classList.add('block');   
+    title.classList.add('block');
+    content.classList.add('block');
+    write(box);
+    vanishedOn(box);
+  }
+}
+function overTwo(box){
+  if (!title.classList.contains('block') && !title.classList.contains('x')) {
+    box.classList.add('effect');  
+    box.classList.add('index');  
+    title.classList.add('x');
+    setTimeout(()=>{
+      title.classList.add('show');
+      content.classList.add('show');
+      text.classList.add('block'); 
+    }, 200);
     title.classList.add('block');
     content.classList.add('block');
     write(box);
@@ -125,6 +168,7 @@ function out(box){
   setTimeout(()=>{
     title.classList.remove('block');
     content.classList.remove('block');   
+    text.classList.remove('block'); 
   }, 200);
   setTimeout(()=>{
     box.classList.remove('index');
