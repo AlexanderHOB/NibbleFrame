@@ -36,5 +36,5 @@ Herramientas y helpers de CSS
 
 ## Debates
 * Media Querys
-* Fontsieze Responsive
+* Fontsize Responsive
 * Reset fontsize
