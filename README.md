@@ -1,4 +1,4 @@
 # Templates for our Projects | NibbleFrame
 
-En esta rama(template) se crearan y almacenaran todas los modelos de pagina web para nuestros proyectos.
+En este branch se crearan y gestionaran todas los templates de paginas web para nuestros proyectos.
 
