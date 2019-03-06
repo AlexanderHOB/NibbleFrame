@@ -6,26 +6,20 @@ Organización de carpetas y archivos Sass.
 Librerias externas
 
 ### Lib
-Herramientas y helpers de sass
+Herramientas y helpers de Sass
 * variables
 * mixins
 * functions
 * placeholder
 
-### Globals
+### Global
 Estilos y clases globales
 * reset
 * typography
 * general
 * class
-* container
 
-### Models
-Estilos para modelos 
-* buttons
-* forms
-
-### Layouts
+### Layout
 Estilos de los layouts
 * header
 * navigation
@@ -37,6 +31,6 @@ Estilos de los layouts
 * footer
 
 ### Components
-Herramientas y helpers de Css
+Herramientas y helpers de CSS
 * media
 * keyframes
