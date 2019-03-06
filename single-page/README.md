@@ -1,5 +1,4 @@
-# Arquitectura Sass del modelo Single Page | NibbleFrame
-
+# Arquitectura Sass del Template Single Page | NibbleFrame
 Organización de carpetas y archivos Sass.
 
 ### Vendor
@@ -34,3 +33,8 @@ Estilos de los layouts
 Herramientas y helpers de CSS
 * media
 * keyframes
+
+## Debates
+* Media Querys
+* Fontsieze Responsive
+* Reset fontsize

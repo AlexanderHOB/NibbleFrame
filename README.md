@@ -1,4 +1,4 @@
-# Modelos de páginas para proyectos | NibbleFrame
+# Templates for our Projects | NibbleFrame
 
-En esta rama se crearan y almacenaran todas los modelos de pagina web para nuestros proyectos.
+En esta rama(template) se crearan y almacenaran todas los modelos de pagina web para nuestros proyectos.
 
