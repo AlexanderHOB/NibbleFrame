@@ -9,13 +9,13 @@ Herramientas y helpers de Sass
 * variables
 * mixins
 * functions
-* placeholder
+* placeholders
 
 ### Global
 Estilos y clases globales
 * reset
-* typography
-* general
+* typographys
+* generals
 * class
 
 ### Layout
@@ -32,7 +32,7 @@ Estilos de los layouts
 ### Components
 Herramientas y helpers de CSS
 * media
-* keyframes
+* animations
 
 ## Debates
 * Media Querys
