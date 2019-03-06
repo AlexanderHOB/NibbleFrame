@@ -29,11 +29,6 @@ Estilos de los layouts
 * contactanos
 * footer
 
-### Components
-Herramientas y helpers de CSS
-* media
-* animations
-
 ## Debates
 * Media Querys
 * Fontsize Responsive
