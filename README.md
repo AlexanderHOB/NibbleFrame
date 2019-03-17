@@ -56,4 +56,10 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 4. Uso de let en for / foreach
 
 ### Validacion HTML
-![Validation](md-resources/w3c-validation.html)
+![Validation](md-resources/w3c-validation.jpg)
+
+### Placeholders vs Mixins
+* Placeholder
+![Placeholder](md-resources/placeholder-vs-mixin-1.jpg)
+* Mixin
+![Mixin](md-resources/placeholder-vs-mixin-2.jpg)
