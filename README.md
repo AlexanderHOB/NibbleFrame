@@ -54,3 +54,6 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 2. Nomenclatura Constantes del DOM Iniciar con $ y Snake Case / const $ejemplo_de_nomenclatura
 3. Clases(POO) Primera letra con Mayuscula
 4. Uso de let en for / foreach
+
+### Validacion HTML
+![Validation](md-resources/w3c-validation.html)

@@ -2,7 +2,7 @@
 # Template Single Page | NibbleFrame
 Caracteristicas
 * scrollspy
-*responsive sidenav
+* responsive
 
 ## Arquitectura Sass
 Organización de carpetas y archivos Sass.
@@ -47,4 +47,3 @@ Herramientas y helpers de css
 * Reset fontsize
 * Material Design
 * Tamaño de imagenes
-* h1 - h6
