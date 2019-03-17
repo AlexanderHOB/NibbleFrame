@@ -58,6 +58,9 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 ### Validacion HTML
 ![Validation](md-resources/w3c-validation.jpg)
 
+### Semantic HTML5
+![Semantic](md-resources/semantic.png)
+
 ### Placeholders vs Mixins
 * Placeholder
 ![Placeholder](md-resources/placeholder-vs-mixin-1.jpg)
