@@ -60,9 +60,3 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 
 ### Semantic HTML5
 ![Semantic](md-resources/semantic.png)
-
-### Placeholders vs Mixins
-* Placeholder
-![Placeholder](md-resources/placeholder-vs-mixin-1.jpg)
-* Mixin
-![Mixin](md-resources/placeholder-vs-mixin-2.jpg)

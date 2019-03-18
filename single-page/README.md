@@ -47,3 +47,9 @@ Herramientas y helpers de css
 * Reset fontsize
 * Material Design
 * Tamaño de imagenes
+
+## Placeholders vs Mixins
+* Placeholder
+![Placeholder](md-resources/placeholder-vs-mixin-1.jpg)
+* Mixin
+![Mixin](md-resources/placeholder-vs-mixin-2.jpg)
