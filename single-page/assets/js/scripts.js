@@ -64,5 +64,3 @@ const breakpoint = window.matchMedia('only screen and (max-width: 767px)');
 // breakpoint.addListener(mql);
 // mql(breakpoint);
 
-document.addEventListener('DOMContentLoaded', function() {
-});
