@@ -21,7 +21,6 @@ Herramientas y helpers de Sass
 ### Global
 Estilos y clases globales
 * reset
-* typographys
 * generals
 * class
 

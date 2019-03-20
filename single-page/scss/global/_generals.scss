@@ -1,0 +1,48 @@
+// GENERAL
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+body {
+	font-family: $font-family;
+	background-color: $bg;
+	color: $text-dark;
+
+	// Scroll
+	&::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+	&::-webkit-scrollbar-track {
+		background-color: rgba(0, 0, 0, .05);
+	}
+	&::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+		background-color: rgba(0, 0, 0, .25);
+	}
+	&::-webkit-scrollbar-thumb:hover {
+		background-color: rgba(0, 0, 0, .45);
+	}
+}
+
+// Titles
+h1 {
+	font-size: $h1-size;
+}
+h2 {
+	font-size: $h2-size;
+}
+
+// Images
+img{
+	width: 100%;
+	display: block;
+}
+
+// Button
+button{
+	cursor: pointer;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

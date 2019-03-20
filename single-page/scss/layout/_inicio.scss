@@ -1,0 +1,9 @@
+// INICIO 
+
+.inicio {
+	@extend %container;
+	background-color: $blue;
+	&-title{
+		color: $text-light;
+	}
+}

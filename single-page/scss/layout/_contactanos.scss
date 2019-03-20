@@ -1,0 +1,9 @@
+// CONTACTANOS
+
+.contactanos {
+	@extend %container;
+	background-color: $green;
+	&-title{
+		color: $text-light;
+	}
+}

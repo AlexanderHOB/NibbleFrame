@@ -1,0 +1,9 @@
+// NOSOTROS 
+
+.nosotros {
+	@extend %container;
+	background-color: $red;
+	&-title{
+		color: $text-light;
+	}
+}

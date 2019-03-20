@@ -48,9 +48,10 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
         * Todo los elementos que no sean textos flexibles(imagenes, videos)
         * Grid Flexible
     * Responsible Responsive Design: Buenas prácticas de CSS + JS
+6. BEM (BLock - Element - Modify) 
 
 ### Practicas JS
-1. Nomeclatura Variables Snake Case / var ejemplo_de_nomenclatura
+1. Nomeclatura Variables CamelCase Case / var ejemploDeNomenclatura
 2. Nomenclatura Constantes del DOM Iniciar con $ y Snake Case / const $ejemplo_de_nomenclatura
 3. Clases(POO) Primera letra con Mayuscula
 4. Uso de let en for / foreach

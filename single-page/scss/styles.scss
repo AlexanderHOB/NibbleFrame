@@ -1,0 +1,33 @@
+// IMPORTS
+
+// Vendor
+
+
+// Lib
+@import 'lib/base-colors';
+@import 'lib/variables';
+@import 'lib/mixins';
+@import 'lib/functions';
+@import 'lib/placeholders';
+
+
+// Global
+@import 'global/reset';
+@import 'global/generals';
+@import 'global/class';
+
+
+// Layout
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/sections';
+@import 'layout/inicio';
+@import 'layout/nosotros';
+@import 'layout/servicios';
+@import 'layout/contactanos';
+@import 'layout/footer';
+
+
+// Components
+@import 'components/media';
+@import 'components/animations';

@@ -1,0 +1,104 @@
+// NAVIGATION
+
+.nav {
+	&-content {
+		display: flex;
+	}
+	&-link{
+		display: inline-block;
+		margin-right: 16px;
+		margin-left: 16px;
+		font-size: 1.05rem;
+		color: rgba(255, 255, 255, .5);
+		transition: .3s;
+		&:hover{
+			color: $text-light;
+		}
+		&.active{
+			position: relative;
+			color: $text-light;
+			&:before{
+				content: '\f107';
+				position: absolute;
+				top: -80%;
+				left: 50%;
+				font-family:"Font Awesome 5 Free";
+				font-weight: 600;
+				transform: translate(-50%);
+				animation: nav-active 1s infinite;
+			}
+		}
+	}
+	&-item:last-child &-link{
+		margin-right: 0;
+	}
+	@include desktop($bp-sm){
+		position: fixed;
+		z-index: 92;
+		left: 0;
+		top: 0;
+		width: 300px;
+		height: 100vh;
+		background-color: #fff;
+		transform: translateX(-105%);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
+		will-change: transform;
+		backface-visibility: hidden;
+		overflow-y: auto;
+		&#{&}-out {
+			transform: translateX(0);
+		}
+		&-overlay {
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			z-index: 91;
+			display: none;
+			height: 100vh;
+			background-color: rgba(0, 0, 0, .5);
+		}
+		&-content {
+			flex-direction: column;
+			align-items: center;
+		}
+		&-link{
+			margin: 16px 0;
+			font-size: 1.5em;
+			color: rgba(0, 0, 0, .5);
+			&:hover{
+				color: rgba(0, 0, 0, .5);
+			}
+			&.active{
+				color: $text-dark;
+				&:before{
+					content: '';
+				}
+			}
+		}
+		&-item:last-child &-link{
+			margin-bottom: 0;
+		}
+	}
+}
+.drag-target{
+	display: none;
+	@include desktop($bp-sm){
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 93;
+		height: 100vh;
+		width: 15px;
+		background-color: rgba(0, 0, 0, .005);
+	}
+}
+
+
+@keyframes nav-active{
+	50%{
+		transform: translate(-50%, 4px);
+	}
+}
