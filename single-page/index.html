@@ -1,67 +1,111 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="robots" content="index,follow" />
-    <meta name="author" content="NibbleFrame, nibbleframe247@gmail.com" />
-    <meta name="description" content="Template - Single Page | NibbleFrame" />
-    <meta name="language" content="es" />
-
-    <!--twiter-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="NibbleFrame, nibbleframe247@gmail.com">
+  <meta name="description" content="Template - Single Page | NibbleFrame">
+  <meta name="language" content="es">
+  <!-- TWITTER -->
     <!-- <meta name="twitter:card" content="summary_large_image" />
 	  <meta name="twitter:site" content="" />
 	  <meta name="twitter:creator" content="" />
 	  <meta name="twitter:title" content="" />
 	  <meta name="twitter:description" content="" />
 	  <meta name="twitter:image" content="" /> -->
-    <!--facebook-->
+    <!-- FACEBOOK -->
     <!-- <meta property="og:url" content="" />
   	<meta property="og:type" content="" />
   	<meta property="og:title" content="" />
   	<meta property="og:description" content="" />
   	<meta property="og:image" content="" /> -->
-
-    <title>Single Page</title>
-
-    <!-- CDN -->
-    <!-- Animate On Scroll -->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
-    <!-- Animate -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"> -->
-    <!-- FontAwesome -->
-    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"> -->
-    <!-- Pushbar -->
-    <!-- <link rel="stylesheet" href="https://oncebot.github.io/pushbar.js/pushbar/pushbar.css"> -->
-
-    <!-- Our Styles -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
-
-    <!-- Icono -->
-    <!-- <link rel="shortcut icon" href=""> -->
-
-    <!--Datos estructurados-->
+  <title>Single Page | NibbleFrame</title>
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <!-- CDN -->
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <!-- OUR STYLES -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <!-- ICON -->
+  <!-- <link rel="shortcut icon" href=""> -->
+  <!--Datos estructurados-->
     <!-- <script type="application/ld+json">
       {
         "@context": "http://schema.org"
-      } -->
-    </script>
+      }
+    </script> -->
+</head>
+<body>
+  <!-- LOADING -->
+  <div class="loading">
+    <div class="loader">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+    </div>
+  </div>
 
-  </head>
-  <body>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-wrapper">
+      <a href="#inicio" class="brand-logo">LOGO</a>
+      <button class="nav-toggle waves" data-target="sidenav">
+        <i class="fas fa-stream"></i>
+        <!-- <i class="fas fa-bars"></i> -->
+      </button>
+      <!-- NAV -->
+      <nav id="sidenav" class="nav">
+        <div class="nav-header">
+          <button class="nav-close waves">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="nav-header-image"></div>
+          <div class="nav-header-content">
+            <p>sistemaGST@gmail.com</p>
+          </div>
+        </div>
+        <ul class="nav-content">
+          <li class="nav-item"><a href="#inicio" data-spy="#inicio" class="nav-link nav-link-active">Inicio</a></li>
+          <li class="nav-item"><a href="#nosotros" data-spy="#nosotros" class="nav-link">Nosotros</a></li>
+          <li class="nav-item"><a href="#servicios" data-spy="#servicios" class="nav-link">Servicios</a></li>
+          <li class="nav-item"><a href="#contactanos" data-spy="#contactanos" class="nav-link">Contactanos</a></li>
+        </ul>
+        <div class="nav-footer">
+          <p>Design by <a href="#!" target="_blank">NibbleFrame</a></p>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-    <!-- JavaScript -->
-    <!-- CDN -->
-    <!-- Animate On Scroll -->
-    <!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script> -->
-    <!-- Pushbar -->
-    <!-- <script src="https://oncebot.github.io/pushbar.js/pushbar/pushbar.js"></script> -->
+  <!-- SECTIONS -->
 
-    <!-- Render JS -->
-    <script src="assets/js/render.js"></script>
+  <!-- INICIO -->
+  <section id="inicio" class="sec inicio">
+    <h1 class="sec-title inicio-title">Inicio</h1>
+  </section>
 
-    <!-- Our Sscripts -->
-    <script src="assets/js/scripts.js"></script>
-  </body>
+  <!-- NOSOTROS -->
+  <section id="nosotros" class="sec nosotros">
+    <h2 class="sec-title nosotros-title">Nosotros</h2>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="sec servicios">
+    <h2 class="sec-title servicios-title">Servicios</h2>
+  </section>
+
+  <!-- CONTACTANOS -->
+  <section id="contactanos" class="sec contactanos">
+    <h2 class="sec-title contactanos-title">Contactanos</h2>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer" class="footer"></footer>
+
+  <!-- JAVASCRIPT -->
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
