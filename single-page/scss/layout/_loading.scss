@@ -9,27 +9,19 @@
 	z-index: 100;
 	height: 100vh;
 	background-color: $light;
-	transition: .5s;
-	&-opacity{
-		opacity: 0;
-	}
-	&-none{
-		display: none;
-	}
+	transition: 1s;
 }
 .loader {
 	position: relative;
 	width: 80px;
+	height: 80px;
 	&:before{
 		content: '';
-		display: block;
-		padding-top: 100%;
+		position: absolute;
 	}
 }
 .circular {
 	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	animation: rotate 2s linear infinite;

@@ -27,6 +27,7 @@ Estilos y clases globales
 
 ### Layout
 Estilos de los layouts
+* loading
 * header
 * navigation
 * sections

@@ -1,14 +1,14 @@
 # Templates for our Projects | NibbleFrame
 En este branch se crearan y gestionaran todas los templates de paginas web para nuestros proyectos.
 
-##Buenas Practicas Front End
+## Buenas Practicas Front End
 Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 
 ### Pracicas HTML
 1. Jerarquia de h1-h6
 
 ### Practicas CSS
-1. Escribe CSS reutilizable DRY (Dont Repeat Yourself)
+1. Escribe CSS reutilizable DRY (Don't Repeat Yourself)
 2. Nomeclatura de clases Kebab Case ejemplo-de-nomenclatura
 3. Formula PC-TV en el ordenamiento de los atributos CSS 
     * Posicionamiento: position, z-index, display, float 
@@ -44,15 +44,16 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
 
 5. Aplicar Responsibe Design a nuestro Responsive Design
     * Responsive Design: Buenas practicas con css
-        *  Uso de media queris
-        * Todo los elementos que no sean textos flexibles(imagenes, videos)
+        *  Uso de media queries
+        * Todo los elementos que no sean textos tienen que ser flexibles(imagenes, videos, layout, etc)
         * Grid Flexible
     * Responsible Responsive Design: Buenas prácticas de CSS + JS
-6. BEM (BLock - Element - Modify) 
+6. BEM MOD
+  * Nomenclatura BEM modificada solo ( - ) guiones block-element | block-modify block-element-modify 
 
 ### Practicas JS
 1. Nomeclatura Variables CamelCase Case / var ejemploDeNomenclatura
-2. Nomenclatura Constantes del DOM Iniciar con $ y Snake Case / const $ejemplo_de_nomenclatura
+2. Nomenclatura Constantes del DOM Iniciar con $ y CamelCase / const $ejemploDeNomenclatura
 3. Clases(POO) Primera letra con Mayuscula
 4. Uso de let en for / foreach
 

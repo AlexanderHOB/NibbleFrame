@@ -20,10 +20,10 @@ $section.forEach((e) => {
 // Completely Loaded
 window.addEventListener('load', function() {
 	headerH = $header.offsetHeight;
-	loading.classList.add('loading-opacity');
+	loading.style.opacity = '0';
 	setTimeout(()=>{
-		loading.classList.add('loading-none');
-	}, 500);	
+		loading.style.display = 'none';
+	}, 1000);	
 });
 
 //DOM Loaded
