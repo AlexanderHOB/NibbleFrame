@@ -6,39 +6,53 @@
 	}
 	&-link{
 		display: inline-block;
-		margin-right: 16px;
-		margin-left: 16px;
-		font-size: 1.05rem;
-		color: rgba(255, 255, 255, .5);
+		margin-right: 32px;
+		color: rgba(255, 255, 255, .7);
 		transition: .3s;
 		&:hover{
 			color: $text-light;
 		}
-		&.active{
-			position: relative;
-			color: $text-light;
-			&:before{
-				content: '\f107';
-				position: absolute;
-				top: -80%;
-				left: 50%;
-				font-family:"Font Awesome 5 Free";
-				font-weight: 600;
-				transform: translate(-50%);
-				animation: nav-active 1s infinite;
+		@include mobile($bp-sm){
+			&#{&}-active{
+				position: relative;
+				color: $text-light;
+				&:before{
+					content: '\f107';
+					position: absolute;
+					top: -80%;
+					left: 50%;
+					font-family: $font-awesome;
+					font-weight: 600;
+					transform: translate(-50%);
+					animation: nav-active 1s infinite;
+				}
 			}
 		}
 	}
 	&-item:last-child &-link{
 		margin-right: 0;
 	}
+	&-header{
+		display: none;
+		&-image{
+			display: none;
+		}
+		&-content{
+			display: none;
+		}
+	}
+	&-footer{
+		display: none;
+	}
+
+	// Sidenav
 	@include desktop($bp-sm){
 		position: fixed;
 		z-index: 92;
 		left: 0;
 		top: 0;
 		width: 300px;
-		height: 100vh;
+		height: 100%;
 		background-color: #fff;
 		transform: translateX(-105%);
 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12), 0 1px 5px 0 rgba(0, 0, 0, .2);
@@ -52,33 +66,86 @@
 			position: fixed;
 			top: 0;
 			left: 0;
-			right: 0;
 			opacity: 0;
 			z-index: 91;
 			display: none;
+			width: 100%;
 			height: 100vh;
 			background-color: rgba(0, 0, 0, .5);
 		}
+		&-header{
+			display: block;
+			position: relative;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+			margin-bottom: 16px;
+			&-image{
+				display: block;
+				position: absolute;
+				z-index: 92;
+				width: 100%;
+				height: 100%;
+				background-image: url('../img/sidenav.png');
+				background-size: cover;
+				background-position: center;
+				filter: brightness(.4);
+			}
+			&-content{
+				display: block;
+				position: absolute;
+				z-index: 93;
+				left: 15px;
+				bottom: 20px;
+				color: $text-light;
+			}
+		}
 		&-content {
-			flex-direction: column;
-			align-items: center;
+			display: block;
 		}
 		&-link{
-			margin: 16px 0;
-			font-size: 1.5em;
-			color: rgba(0, 0, 0, .5);
+			display: block;
+			margin: 0;
+			padding: 16px 0 16px 50px;
+			font-size: 18px;
+			color: $text-dark;
 			&:hover{
-				color: rgba(0, 0, 0, .5);
-			}
-			&.active{
 				color: $text-dark;
-				&:before{
-					content: '';
-				}
+			}
+			&:before{
+				content: '\f015';
+				position: absolute;
+				font-family: $font-awesome;
+				font-weight: 600;
+				top: 48%;
+				transform: translate(-35px, -50%);
+			}
+			&#{&}-active{
+				color: $text-blue;
 			}
 		}
-		&-item:last-child &-link{
-			margin-bottom: 0;
+		&-item:nth-child(2) &-link:before{
+			content: '\f0c0';
+		}
+		&-item:nth-child(3) &-link:before{
+			// content: '\f5ad';
+			// content: '\f0e7';
+			content: '\f06d';
+		}
+		&-item:nth-child(4) &-link:before{
+			// content: '\f0e0';
+			// content: '\f086';
+			content: '\f1d8';
+		}
+		&-footer{
+			display: block;
+			position: absolute;
+			width: 100%;
+			bottom: 20px;
+			text-align: center;
+			& a{
+				color: $text-blue;
+			}
 		}
 	}
 }
@@ -89,14 +156,29 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		z-index: 93;
+		z-index: 90;
 		height: 100vh;
 		width: 15px;
 		background-color: rgba(0, 0, 0, .005);
 	}
 }
+.nav-close{
+	display: none;
+	@include desktop($bp-sm){
+		display: block;
+		position: absolute;
+		z-index: 93;
+		top: 10px;
+		right: 10px;
+		background-color: transparent;
+		& i{
+			font-size: 24px;
+			color: $text-light;
+		}
+	}
+}
 
-
+// Animations
 @keyframes nav-active{
 	50%{
 		transform: translate(-50%, 4px);

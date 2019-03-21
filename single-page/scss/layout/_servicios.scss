@@ -2,5 +2,8 @@
 
 .servicios {
 	@extend %container;
-	background-color: $yellow;
+	background-color: $teal;
+	&-title{
+		color: $text-light;
+	}
 }

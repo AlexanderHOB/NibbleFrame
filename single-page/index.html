@@ -32,22 +32,42 @@
 <body>
 
   <!-- LOADING -->
+  <div class="loading">
+    <div class="loader">
+      <svg class="circular" viewBox="25 25 50 50">
+        <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+      </svg>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="header">
     <div class="header-wrapper">
       <a href="#inicio" class="brand-logo">LOGO</a>
-      <button class="nav-toggle" data-target="menuSide">
-        <i class="fas fa-bars"></i>
+      <button class="nav-toggle waves" data-target="sidenav">
+        <i class="fas fa-stream"></i>
+        <!-- <i class="fas fa-bars"></i> -->
       </button>
       <!-- NAV -->
-      <nav id="menuSide" class="nav">
+      <nav id="sidenav" class="nav">
+        <div class="nav-header">
+          <button class="nav-close waves">
+            <i class="fas fa-times"></i>
+          </button>
+          <div class="nav-header-image"></div>
+          <div class="nav-header-content">
+            <p>sistemaGST@gmail.com</p>
+          </div>
+        </div>
         <ul class="nav-content">
-          <li class="nav-item"><a href="#inicio" data-spy="#inicio" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="#inicio" data-spy="#inicio" class="nav-link nav-link-active">Inicio</a></li>
           <li class="nav-item"><a href="#nosotros" data-spy="#nosotros" class="nav-link">Nosotros</a></li>
           <li class="nav-item"><a href="#servicios" data-spy="#servicios" class="nav-link">Servicios</a></li>
           <li class="nav-item"><a href="#contactanos" data-spy="#contactanos" class="nav-link">Contactanos</a></li>
         </ul>
+        <div class="nav-footer">
+          <p>Design by <a href="#!" target="_blank">NibbleFrame</a></p>
+        </div>
       </nav>
     </div>
   </header>
@@ -80,7 +100,8 @@
   </footer>
 
   <!-- JavaScript -->
+  <script type="text/javascript" src="assets/js/app.js"></script>
   <script type="text/javascript" src="assets/js/scripts.js"></script>
-  <script type="text/javascript" src="assets/js/sidenav.js"></script>
+  
 </body>
 </html>

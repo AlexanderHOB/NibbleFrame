@@ -3,6 +3,7 @@
 Caracteristicas
 * scrollspy
 * responsive
+* sidenav drag out
 
 ## Arquitectura Sass
 Organización de carpetas y archivos Sass.

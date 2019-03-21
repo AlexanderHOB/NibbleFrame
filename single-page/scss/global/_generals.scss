@@ -3,11 +3,12 @@
 *, *:before, *:after {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
+	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 }
 body {
-	font-family: $font-family;
-	background-color: $bg;
+	font-family: $roboto, $sans-serif;
+	background-color: $light;
 	color: $text-dark;
 
 	// Scroll
@@ -29,10 +30,16 @@ body {
 
 // Titles
 h1 {
-	font-size: $h1-size;
+	font-size: 2em; 
 }
 h2 {
-	font-size: $h2-size;
+	font-size: 1.5em; 
+}
+h3{
+	font-size: 1.17em; 
+}
+h4{
+	font-size: 1em;
 }
 
 // Images
@@ -41,7 +48,7 @@ img{
 	display: block;
 }
 
-// Button
-button{
+// Button & ancla
+button, a{
 	cursor: pointer;
 }
