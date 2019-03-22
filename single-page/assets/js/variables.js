@@ -21,6 +21,6 @@ $section.forEach((e) => {
 // Messenger Service
 const $messenger = document.querySelector('.messenger'),
 $messengerToggle = document.querySelector('.messenger-toggle'),
-$messengerFacebook = document.querySelector('.messenger-facebook'),
+$messengerFacebookM = document.querySelector('.messenger-facebook-m'),
 $messengerChat = document.querySelector('.messenger-chat'),
 $closeChat = document.querySelector('.close-chat');

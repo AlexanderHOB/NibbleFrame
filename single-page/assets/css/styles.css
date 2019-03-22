@@ -678,7 +678,7 @@ button, a {
   height: 50px;
 }
 
-.messenger-facebook, .messenger-whatsapp, .messenger-toggle {
+.messenger-facebook, .messenger-facebook-m, .messenger-whatsapp, .messenger-toggle {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -698,22 +698,29 @@ button, a {
   color: #ffffff;
 }
 
-.messenger-facebook, .messenger-whatsapp {
+.messenger-facebook, .messenger-facebook-m, .messenger-whatsapp {
   z-index: 82;
   opacity: 0;
 }
 
 .messenger-facebook {
-  -webkit-transition: .6s;
-  -o-transition: .6s;
-  transition: .6s;
+  -webkit-transition: .4s;
+  -o-transition: .4s;
+  transition: .4s;
+  background-color: #3b5999;
+}
+
+.messenger-facebook-m {
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
   background-color: #0084ff;
 }
 
 .messenger-whatsapp {
-  -webkit-transition: .4s;
-  -o-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .6s;
+  -o-transition: .6s;
+  transition: .6s;
   background-color: #4dc247;
 }
 
@@ -744,11 +751,11 @@ button, a {
   opacity: 0;
 }
 
-.messenger-up .messenger-whatsapp, .messenger-up .messenger-facebook {
+.messenger-up .messenger-facebook, .messenger-up .messenger-facebook-m, .messenger-up .messenger-whatsapp {
   opacity: .9;
 }
 
-.messenger-up .messenger-whatsapp:hover, .messenger-up .messenger-facebook:hover {
+.messenger-up .messenger-facebook:hover, .messenger-up .messenger-facebook-m:hover, .messenger-up .messenger-whatsapp:hover {
   -webkit-box-shadow: 0 0 6px black;
   box-shadow: 0 0 6px black;
   opacity: 1;
@@ -768,16 +775,22 @@ button, a {
   opacity: 1;
 }
 
+.messenger-up .messenger-facebook {
+  -webkit-transform: translateY(-195px);
+  -ms-transform: translateY(-195px);
+  transform: translateY(-195px);
+}
+
+.messenger-up .messenger-facebook-m {
+  -webkit-transform: translateY(-130px);
+  -ms-transform: translateY(-130px);
+  transform: translateY(-130px);
+}
+
 .messenger-up .messenger-whatsapp {
   -webkit-transform: translateY(-65px);
   -ms-transform: translateY(-65px);
   transform: translateY(-65px);
-}
-
-.messenger-up .messenger-facebook {
-  -webkit-transform: translateY(-130px);
-  -ms-transform: translateY(-130px);
-  transform: translateY(-130px);
 }
 
 .messenger-chat {

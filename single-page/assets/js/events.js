@@ -15,7 +15,7 @@ $messengerToggle.addEventListener('click', function(){
 		$messenger.classList.add('messenger-close');
 	}
 });
-$messengerFacebook.addEventListener('click', function(){
+$messengerFacebookM.addEventListener('click', function(){
 	$messenger.classList.remove('messenger-up');
 	$messengerChat.classList.add('messenger-chat-up');
 	$messengerChat.style.display = 'block';

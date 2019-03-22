@@ -7,7 +7,7 @@
 	right: 20px;
 	width: 50px;
 	height: 50px;
-	&-facebook, &-whatsapp, &-toggle {
+	&-facebook, &-facebook-m, &-whatsapp, &-toggle {
 		position: absolute;
 		display: flex;
 		justify-content: center;
@@ -19,16 +19,20 @@
 		font-size: 32px;
 		color: $text-light;
 	}
-	&-facebook, &-whatsapp {
+	&-facebook, &-facebook-m, &-whatsapp {
 		z-index: 82;
 		opacity: 0;
 	}
-	&-facebook {
-		transition: .6s;
+	&-facebook{
+		transition: .4s; // 5s
+		background-color: #3b5999;
+	}
+	&-facebook-m {
+		transition: .5s;
 		background-color: #0084ff;
 	}
 	&-whatsapp {
-		transition: .4s;
+		transition: .6s;
 		background-color: #4dc247;
 	}
 	&-toggle {
@@ -49,7 +53,7 @@
 			opacity: 0;
 		}
 	}
-	&-up &-whatsapp, &-up &-facebook {
+	&-up &-facebook, &-up &-facebook-m, &-up &-whatsapp {
 		opacity: .9;
 		&:hover{
 			box-shadow: 0 0 6px rgba(0, 0, 0, 1);
@@ -67,11 +71,14 @@
 			opacity: 1;
 		}
 	}
+	&-up &-facebook {
+		transform: translateY(-195px); // translateX(-65px)
+	}
+	&-up &-facebook-m {
+		transform: translateY(-130px);
+	}
 	&-up &-whatsapp {
 		transform: translateY(-65px);
-	}
-	&-up &-facebook {
-		transform: translateY(-130px);
 	}
 	&-chat{
 		position: absolute;
