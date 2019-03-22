@@ -42,8 +42,16 @@ Herramientas y helpers de css
 * media
 * animations
 
+## Organizacipon JS
+Forma de organizar archivos JS
+* variables
+* windowDocuemnt
+* events
+* functions
+* mediaQueries
+
 ## Debates
-* Media Querys
+* Media Queries
 * Fontsize Responsive
 * Reset fontsize
 * Material Design

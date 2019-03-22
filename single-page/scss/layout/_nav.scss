@@ -37,7 +37,7 @@
 		&-image{
 			display: none;
 		}
-		&-content{
+		&-avatar{
 			display: none;
 		}
 	}
@@ -80,7 +80,7 @@
 			height: 200px;
 			overflow: hidden;
 			margin-bottom: 16px;
-			&-image{
+			&-bg{
 				display: block;
 				position: absolute;
 				z-index: 92;
@@ -91,13 +91,33 @@
 				background-position: center;
 				filter: brightness(.4);
 			}
-			&-content{
+			&-avatar{
 				display: block;
 				position: absolute;
 				z-index: 93;
 				left: 15px;
 				bottom: 20px;
 				color: $text-light;
+				&-img{
+					width: 64px;
+					height: 64px;
+					border-radius: 50%;
+					background-image: url('../img/logo.jpg');
+					background-size: cover;
+					background-position: center;
+					overflow: hidden;
+				}
+				&-branch{
+					margin-top: 20px;
+					margin-bottom: 10px;
+					font-weight: 500;
+				}
+				&-email{
+					font-weight: 300;
+					.fas{
+						transform: translateY(1px);
+					}
+				}
 			}
 		}
 		&-content {
@@ -128,13 +148,10 @@
 			content: '\f0c0';
 		}
 		&-item:nth-child(3) &-link:before{
-			// content: '\f5ad';
 			// content: '\f0e7';
 			content: '\f06d';
 		}
 		&-item:nth-child(4) &-link:before{
-			// content: '\f0e0';
-			// content: '\f086';
 			content: '\f1d8';
 		}
 		&-footer{

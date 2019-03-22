@@ -1,0 +1,129 @@
+// MESSENGER
+
+.messenger {
+	position: fixed;
+	z-index: 80;
+	bottom: 20px;
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	&-facebook, &-whatsapp, &-toggle {
+		position: absolute;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+		font-size: 32px;
+		color: $text-light;
+	}
+	&-facebook, &-whatsapp {
+		z-index: 82;
+		opacity: 0;
+	}
+	&-facebook {
+		transition: .6s;
+		background-color: #0084ff;
+	}
+	&-whatsapp {
+		transition: .4s;
+		background-color: #4dc247;
+	}
+	&-toggle {
+		z-index: 83;
+		background-color: $purple;
+		font-size: 28px;
+		opacity: .9;
+		transition: .5s;
+		&:hover{
+			box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+			opacity: 1;
+		}
+		.fas{
+			position: absolute;
+			transition: .5s;
+		}
+		.fas:nth-child(2){
+			opacity: 0;
+		}
+	}
+	&-up &-whatsapp, &-up &-facebook {
+		opacity: .9;
+		&:hover{
+			box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+			opacity: 1;
+		}
+	}
+	&-close &-toggle{
+		.fas{
+			transform: rotate(360deg);
+		}
+		.fas:nth-child(1){
+			opacity: 0;
+		}
+		.fas:nth-child(2){
+			opacity: 1;
+		}
+	}
+	&-up &-whatsapp {
+		transform: translateY(-65px);
+	}
+	&-up &-facebook {
+		transform: translateY(-130px);
+	}
+	&-chat{
+		position: absolute;
+		left: 0;
+		z-index: 81;
+		width: 300px;
+		height: 350px;
+		transform: translate(-240px, -300px);
+		box-shadow: 0 0 6px 4px rgba(0, 0, 0, .15);
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: #0084FF;
+		opacity: 0;
+		&-title{
+			display: flex;
+			width: 100%;
+			padding: 15px;
+			align-items: center;
+			color: $text-light;
+			.fab, .fas{
+				display: inline-block;
+				font-size: 20px;
+			}
+			.fab{
+				margin-right: 5px;
+			}
+			.fas{
+				margin-left: auto;
+				cursor: pointer;
+			}
+		}
+		&#{&}-up{
+			opacity: 0;
+			transform: translate(-240px, -300px);
+			animation: chat-up .5s forwards;
+		}
+		&#{&}-down{
+			opacity: 1;
+			transform: translate(-240px, -370px);
+			animation: chat-down .5s forwards;
+		}
+	}
+}
+@keyframes chat-up{
+	100%{
+		opacity: 1;
+		transform: translate(-240px, -370px);
+	}
+}
+@keyframes chat-down{
+	100%{
+		opacity: 0;
+		transform: translate(-240px, -300px);
+	}
+}

@@ -35,7 +35,6 @@
       <a href="#inicio" class="brand-logo">LOGO</a>
       <button class="nav-toggle waves" data-target="sidenav">
         <i class="fas fa-stream"></i>
-        <!-- <i class="fas fa-bars"></i> -->
       </button>
       <!-- NAV -->
       <nav id="sidenav" class="nav">
@@ -43,9 +42,13 @@
           <button class="nav-close waves">
             <i class="fas fa-times"></i>
           </button>
-          <div class="nav-header-image"></div>
-          <div class="nav-header-content">
-            <p>sistemaGST@gmail.com</p>
+          <div class="nav-header-bg"></div>
+          <div class="nav-header-avatar">
+            <div class="nav-header-avatar-img">
+              <!-- <img src="assets/img/logo.jpg" alt="logo"> -->
+            </div>
+            <p class="nav-header-avatar-branch">Grupo GST</p>
+            <p class="nav-header-avatar-email"><i class="fas fa-envelope"></i> sistemaGST@gmail.com</p>
           </div>
         </div>
         <ul class="nav-content">
@@ -55,7 +58,7 @@
           <li class="nav-item"><a href="#contactanos" data-spy="#contactanos" class="nav-link">Contactanos</a></li>
         </ul>
         <div class="nav-footer">
-          <p>Design by <a href="#!" target="_blank">NibbleFrame</a></p>
+          <p><i class="fas fa-pen-nib"></i> Design by <a href="https://nibbleframe.com" target="_blank">NibbleFrame</a></p>
         </div>
       </nav>
     </div>
@@ -86,8 +89,23 @@
   <!-- FOOTER -->
   <footer id="footer" class="footer"></footer>
 
+  <!-- MESSENGER SERVICE -->
+  <div class="messenger">
+    <a href="javascript:void(0)" class="messenger-toggle waves"><i class="fas fa-comments"></i><i class="fas fa-times"></i></a>      
+    <a href="javascript:void(0)" class="messenger-facebook waves" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+    <a href="https://api.whatsapp.com/send?phone=51936109735" class="messenger-whatsapp waves" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="messenger-chat">
+      <p class="messenger-chat-title"><i class="fab fa-facebook-messenger"></i> Facebook Messenger <i class="fas fa-times close-chat"></i></p>
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fnibbleframe%2F&tabs=messages&width=300&height=300&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="300" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+
   <!-- JAVASCRIPT -->
-  <script src="assets/js/app.js"></script>
-  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/material.js"></script>
+  <script src="assets/js/variables.js"></script>
+  <script src="assets/js/windowDocuemnt.js"></script>
+  <script src="assets/js/events.js"></script>
+  <script src="assets/js/functions.js"></script>
+  <script src="assets/js/mediaQueries.js"></script>
 </body>
 </html>
