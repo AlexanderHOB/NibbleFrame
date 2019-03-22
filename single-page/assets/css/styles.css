@@ -647,63 +647,63 @@ button, a {
   text-align: center;
 }
 
-.sec h1.sec-title {
+.sec-title h1.sec-title {
   font-size: 2em;
 }
 
-.sec h2.sec-title {
+.sec-title h2.sec-title {
   font-size: 1.5em;
 }
 
-.sec h3.sec-title {
+.sec-title h3.sec-title {
   font-size: 1.17em;
 }
 
-.sec h4.sec-title {
+.sec-title h4.sec-title {
   font-size: 1em;
 }
 
 @media only screen and (min-width: 768px) {
-  .sec h1.sec-title {
+  .sec-title h1.sec-title {
     font-size: 2.5em;
   }
-  .sec h2.sec-title {
+  .sec-title h2.sec-title {
     font-size: 2em;
   }
-  .sec h3.sec-title {
+  .sec-title h3.sec-title {
     font-size: 1.67em;
   }
-  .sec h4.sec-title {
+  .sec-title h4.sec-title {
     font-size: 1.5em;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .sec h1.sec-title {
+  .sec-title h1.sec-title {
     font-size: 3em;
   }
-  .sec h2.sec-title {
+  .sec-title h2.sec-title {
     font-size: 2.5em;
   }
-  .sec h3.sec-title {
+  .sec-title h3.sec-title {
     font-size: 2.17em;
   }
-  .sec h4.sec-title {
+  .sec-title h4.sec-title {
     font-size: 2em;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .sec h1.sec-title {
+  .sec-title h1.sec-title {
     font-size: 4em;
   }
-  .sec h2.sec-title {
+  .sec-title h2.sec-title {
     font-size: 3em;
   }
-  .sec h3.sec-title {
+  .sec-title h3.sec-title {
     font-size: 2.67em;
   }
-  .sec h4.sec-title {
+  .sec-title h4.sec-title {
     font-size: 2.5em;
   }
 }
