@@ -83,11 +83,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
+  border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.05);
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 20px;
+  border-radius: 50px;
   background-color: rgba(0, 0, 0, 0.25);
 }
 
@@ -211,8 +212,8 @@ button, a {
 
 .loader {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
 }
 
 .loader:before {
@@ -312,6 +313,37 @@ button, a {
   90% {
     stroke: #ffeb3b;
   }
+}
+
+/* Make clicks pass-through */
+.nprogress {
+  pointer-events: none;
+}
+
+.nprogress .bar {
+  background: #03a9f4;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+/* Fancy blur effect */
+.nprogress .peg {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  width: 100px;
+  height: 100%;
+  -webkit-box-shadow: 0 0 10px #03a9f4, 0 0 5px #03a9f4;
+  box-shadow: 0 0 10px #03a9f4, 0 0 5px #03a9f4;
+  opacity: 1;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
 }
 
 .header {
@@ -790,6 +822,85 @@ button, a {
   transform: scale(1) translateY(-65px);
 }
 
+.messenger-tooltip {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .messenger-tooltip {
+    display: block;
+    position: absolute;
+    z-index: 81;
+    color: #212121;
+    background-color: #ffffff;
+    padding: 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+  }
+  .messenger-tooltip-facebook {
+    -webkit-transform: translate(-60px, -181px);
+    -ms-transform: translate(-60px, -181px);
+    transform: translate(-60px, -181px);
+  }
+  .messenger-tooltip-facebook-m {
+    -webkit-transform: translate(-68px, -117px);
+    -ms-transform: translate(-68px, -117px);
+    transform: translate(-68px, -117px);
+  }
+  .messenger-tooltip-whatsapp {
+    -webkit-transform: translate(-64px, -53px);
+    -ms-transform: translate(-64px, -53px);
+    transform: translate(-64px, -53px);
+  }
+  .messenger-tooltip-toggle {
+    -webkit-transform: translate(-84px, 12px);
+    -ms-transform: translate(-84px, 12px);
+    transform: translate(-84px, 12px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .messenger-facebook:hover + .messenger-tooltip-facebook,
+  .messenger-facebook-m:hover + .messenger-tooltip-facebook-m,
+  .messenger-whatsapp:hover + .messenger-tooltip-whatsapp,
+  .messenger-toggle:hover + .messenger-tooltip-toggle {
+    opacity: 1;
+    visibility: visible;
+  }
+  .messenger-facebook:hover + .messenger-tooltip-facebook {
+    -webkit-transform: translate(-80px, -181px);
+    -ms-transform: translate(-80px, -181px);
+    transform: translate(-80px, -181px);
+  }
+  .messenger-facebook-m:hover + .messenger-tooltip-facebook-m {
+    -webkit-transform: translate(-88px, -117px);
+    -ms-transform: translate(-88px, -117px);
+    transform: translate(-88px, -117px);
+  }
+  .messenger-whatsapp:hover + .messenger-tooltip-whatsapp {
+    -webkit-transform: translate(-84px, -53px);
+    -ms-transform: translate(-84px, -53px);
+    transform: translate(-84px, -53px);
+  }
+  .messenger-toggle:hover + .messenger-tooltip-toggle {
+    -webkit-transform: translate(-104px, 12px);
+    -ms-transform: translate(-104px, 12px);
+    transform: translate(-104px, 12px);
+  }
+  .messenger-close .messenger-toggle:hover + .messenger-tooltip-toggle {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 .messenger-chat {
   position: absolute;
   left: 0;
@@ -849,85 +960,6 @@ button, a {
   transform: translate(-240px, -370px);
   -webkit-animation: chat-down .5s forwards;
   animation: chat-down .5s forwards;
-}
-
-.tooltip {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .tooltip {
-    display: block;
-    position: absolute;
-    z-index: 81;
-    color: #212121;
-    background-color: #ffffff;
-    padding: 5px;
-    font-size: 13px;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-  }
-  .tooltip-facebook {
-    -webkit-transform: translate(-60px, -181px);
-    -ms-transform: translate(-60px, -181px);
-    transform: translate(-60px, -181px);
-  }
-  .tooltip-facebook-m {
-    -webkit-transform: translate(-68px, -117px);
-    -ms-transform: translate(-68px, -117px);
-    transform: translate(-68px, -117px);
-  }
-  .tooltip-whatsapp {
-    -webkit-transform: translate(-64px, -53px);
-    -ms-transform: translate(-64px, -53px);
-    transform: translate(-64px, -53px);
-  }
-  .tooltip-toggle {
-    -webkit-transform: translate(-84px, 12px);
-    -ms-transform: translate(-84px, 12px);
-    transform: translate(-84px, 12px);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .messenger-facebook:hover + .tooltip-facebook,
-  .messenger-facebook-m:hover + .tooltip-facebook-m,
-  .messenger-whatsapp:hover + .tooltip-whatsapp,
-  .messenger-toggle:hover + .tooltip-toggle {
-    opacity: 1;
-    visibility: visible;
-  }
-  .messenger-facebook:hover + .tooltip-facebook {
-    -webkit-transform: translate(-80px, -181px);
-    -ms-transform: translate(-80px, -181px);
-    transform: translate(-80px, -181px);
-  }
-  .messenger-facebook-m:hover + .tooltip-facebook-m {
-    -webkit-transform: translate(-88px, -117px);
-    -ms-transform: translate(-88px, -117px);
-    transform: translate(-88px, -117px);
-  }
-  .messenger-whatsapp:hover + .tooltip-whatsapp {
-    -webkit-transform: translate(-84px, -53px);
-    -ms-transform: translate(-84px, -53px);
-    transform: translate(-84px, -53px);
-  }
-  .messenger-toggle:hover + .tooltip-toggle {
-    -webkit-transform: translate(-104px, 12px);
-    -ms-transform: translate(-104px, 12px);
-    transform: translate(-104px, 12px);
-  }
-  .messenger-close .messenger-toggle:hover + .tooltip-toggle {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 @-webkit-keyframes chat-up {

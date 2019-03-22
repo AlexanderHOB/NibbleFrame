@@ -13,8 +13,8 @@
 }
 .loader {
 	position: relative;
-	width: 80px;
-	height: 80px;
+	width: 100px;
+	height: 100px;
 	&:before{
 		content: '';
 		position: absolute;
@@ -69,4 +69,30 @@
 	90% {
 		stroke: $yellow;
 	}
+}
+
+/* Make clicks pass-through */
+.nprogress {
+	pointer-events: none;
+}
+.nprogress .bar {
+	background: $light-blue;
+	position: fixed;
+	z-index: 101;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 3px;
+}
+/* Fancy blur effect */
+.nprogress .peg {
+	display: block;
+	position: absolute;
+	z-index: 100;
+	right: 0;
+	width: 100px;
+	height: 100%;
+	box-shadow: 0 0 10px $light-blue, 0 0 5px $light-blue;
+	opacity: 1;
+	transform: rotate(3deg) translate(0px, -4px);
 }

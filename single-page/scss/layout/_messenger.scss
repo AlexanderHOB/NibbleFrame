@@ -80,6 +80,65 @@
 		transform: scale(1) translateY(-65px);
 	}
 
+	// Tooltips
+	&-tooltip {
+		display: none;
+		@include mobile($bp-sm){
+			display: block;
+			position: absolute;
+			z-index: 81;
+			color: $text-dark;
+			background-color: $light;
+			padding: 5px;
+			font-size: 13px;
+			border-radius: 5px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+			white-space: nowrap;
+			opacity: 0;
+			visibility: hidden;
+			transition: .5s;
+			&-facebook{
+				transform: translate(-60px, -181px);
+			}
+			&-facebook-m{
+				transform: translate(-68px, -117px);
+			}
+			&-whatsapp{
+				transform: translate(-64px, -53px);
+			}
+			&-toggle{
+				transform: translate(-84px, 12px);
+			}
+		}
+	}
+
+	// ToolTip Hover
+	@include mobile($bp-sm){
+		&-facebook:hover + &-tooltip-facebook,
+		&-facebook-m:hover + &-tooltip-facebook-m,
+		&-whatsapp:hover + &-tooltip-whatsapp,
+		&-toggle:hover + &-tooltip-toggle{
+			opacity: 1;
+			visibility: visible;
+		}
+		&-facebook:hover + &-tooltip-facebook{
+			transform: translate(-80px, -181px);
+		}
+		&-facebook-m:hover + &-tooltip-facebook-m{
+			transform: translate(-88px, -117px);
+		}
+		&-whatsapp:hover + &-tooltip-whatsapp{
+			transform: translate(-84px, -53px);
+		}
+		&-toggle:hover + &-tooltip-toggle{
+			transform: translate(-104px, 12px);
+		}
+		&-close &-toggle:hover+ &-tooltip-toggle{
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
 	// Chat
 	&-chat{
 		position: absolute;
@@ -120,66 +179,6 @@
 			opacity: 1;
 			transform: translate(-240px, -370px);
 			animation: chat-down .5s forwards;
-		}
-	}
-}
-
-// Tooltips
-.tooltip {
-	display: none;
-	@include mobile($bp-sm){
-		display: block;
-		position: absolute;
-		z-index: 81;
-		color: $text-dark;
-		background-color: $light;
-		padding: 5px;
-		font-size: 13px;
-		border-radius: 5px;
-		box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
-		white-space: nowrap;
-		opacity: 0;
-		visibility: hidden;
-		transition: .5s;
-		&-facebook{
-			transform: translate(-60px, -181px);
-		}
-		&-facebook-m{
-			transform: translate(-68px, -117px);
-		}
-		&-whatsapp{
-			transform: translate(-64px, -53px);
-		}
-		&-toggle{
-			transform: translate(-84px, 12px);
-		}
-	}
-}
-
-.messenger{
-	@include mobile($bp-sm){
-		&-facebook:hover + .tooltip-facebook,
-		&-facebook-m:hover + .tooltip-facebook-m,
-		&-whatsapp:hover + .tooltip-whatsapp,
-		&-toggle:hover + .tooltip-toggle{
-			opacity: 1;
-			visibility: visible;
-		}
-		&-facebook:hover + .tooltip-facebook{
-			transform: translate(-80px, -181px);
-		}
-		&-facebook-m:hover + .tooltip-facebook-m{
-			transform: translate(-88px, -117px);
-		}
-		&-whatsapp:hover + .tooltip-whatsapp{
-			transform: translate(-84px, -53px);
-		}
-		&-toggle:hover + .tooltip-toggle{
-			transform: translate(-104px, 12px);
-		}
-		&-close &-toggle:hover+ .tooltip-toggle{
-			opacity: 0;
-			visibility: hidden;
 		}
 	}
 }

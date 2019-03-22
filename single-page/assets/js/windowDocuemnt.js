@@ -10,6 +10,7 @@ window.addEventListener('load', function() {
 	setTimeout(()=>{
 		$loading.style.display = 'none';
 	}, 1000);
+	NProgress.done();
 
 	// Chat none
 	chatNone();
