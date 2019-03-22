@@ -2,7 +2,7 @@
 
 .nosotros {
 	@extend %container;
-	background-color: $deep-purple;
+	background-color: $bg-nosotros;
 	&-title{
 		color: $text-light;
 	}

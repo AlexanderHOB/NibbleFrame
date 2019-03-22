@@ -8,7 +8,6 @@
 }
 body {
 	font-family: $roboto, $sans-serif;
-	background-color: $light;
 	color: $text-dark;
 
 	// Scroll
@@ -27,20 +26,6 @@ body {
 	&::-webkit-scrollbar-thumb:hover {
 		background-color: rgba(0, 0, 0, .45);
 	}
-}
-
-// Titles
-h1 {
-	font-size: 2em; 
-}
-h2 {
-	font-size: 1.5em; 
-}
-h3{
-	font-size: 1.17em; 
-}
-h4{
-	font-size: 1em;
 }
 
 // Images

@@ -2,7 +2,7 @@
 
 .contactanos {
 	@extend %container;
-	background-color: $green;
+	background-color: $bg-contactanos;
 	&-title{
 		color: $text-light;
 	}

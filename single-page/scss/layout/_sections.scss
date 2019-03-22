@@ -3,8 +3,64 @@
 .sec {
 	padding-top: 70px;
 	height: 100vh;
-	&-title{
+	&-title {
 		font-weight: 400;
 		text-align: center;
 	}
+	// Titles h
+	h1#{&}-title {
+		font-size: 2em; 
+	}
+	h2#{&}-title {
+		font-size: 1.5em; 
+	}
+	h3#{&}-title {
+		font-size: 1.17em; 
+	}
+	h4#{&}-title {
+		font-size: 1em;
+	}
+	@include mobile($bp-sm){
+		h1#{&}-title {
+			font-size: 2.5em; 
+		}
+		h2#{&}-title {
+			font-size: 2em; 
+		}
+		h3#{&}-title {
+			font-size: 1.67em; 
+		}
+		h4#{&}-title {
+			font-size: 1.5em;
+		}
+	}
+	@include mobile($bp-md){
+		h1#{&}-title {
+			font-size: 3em; 
+		}
+		h2#{&}-title {
+			font-size: 2.5em; 
+		}
+		h3#{&}-title {
+			font-size: 2.17em; 
+		}
+		h4#{&}-title {
+			font-size: 2em;
+		}
+	}
+	@include mobile($bp-lg){
+		h1#{&}-title {
+			font-size: 4em; 
+		}
+		h2#{&}-title {
+			font-size: 3em; 
+		}
+		h3#{&}-title {
+			font-size: 2.67em; 
+		}
+		h4#{&}-title {
+			font-size: 2.5em;
+		}
+	}
 }
+

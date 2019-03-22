@@ -1,4 +1,3 @@
-
 # Template Single Page | NibbleFrame
 Caracteristicas
 * scrollspy
@@ -53,8 +52,7 @@ Forma de organizar archivos JS
 
 ## Debates
 * Media Queries
-* Fontsize Responsive
-* Reset fontsize
+* Variables para todo
 * Material Design
 * Tamaño de imagenes
 

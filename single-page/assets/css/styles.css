@@ -73,7 +73,6 @@ button {
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
   color: #212121;
 }
 
@@ -94,22 +93,6 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.45);
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.17em;
-}
-
-h4 {
-  font-size: 1em;
 }
 
 img {
@@ -664,6 +647,67 @@ button, a {
   text-align: center;
 }
 
+.sec h1.sec-title {
+  font-size: 2em;
+}
+
+.sec h2.sec-title {
+  font-size: 1.5em;
+}
+
+.sec h3.sec-title {
+  font-size: 1.17em;
+}
+
+.sec h4.sec-title {
+  font-size: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+  .sec h1.sec-title {
+    font-size: 2.5em;
+  }
+  .sec h2.sec-title {
+    font-size: 2em;
+  }
+  .sec h3.sec-title {
+    font-size: 1.67em;
+  }
+  .sec h4.sec-title {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .sec h1.sec-title {
+    font-size: 3em;
+  }
+  .sec h2.sec-title {
+    font-size: 2.5em;
+  }
+  .sec h3.sec-title {
+    font-size: 2.17em;
+  }
+  .sec h4.sec-title {
+    font-size: 2em;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .sec h1.sec-title {
+    font-size: 4em;
+  }
+  .sec h2.sec-title {
+    font-size: 3em;
+  }
+  .sec h3.sec-title {
+    font-size: 2.67em;
+  }
+  .sec h4.sec-title {
+    font-size: 2.5em;
+  }
+}
+
 .inicio {
   background-color: #2196F3;
 }
@@ -991,50 +1035,5 @@ button, a {
     opacity: 0;
     -webkit-transform: translate(-240px, -300px);
     transform: translate(-240px, -300px);
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  h1 {
-    font-size: 2.5em;
-  }
-  h2 {
-    font-size: 2em;
-  }
-  h3 {
-    font-size: 1.67em;
-  }
-  h4 {
-    font-size: 1.5em;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  h1 {
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 2.5em;
-  }
-  h3 {
-    font-size: 2.17em;
-  }
-  h4 {
-    font-size: 2em;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  h1 {
-    font-size: 4em;
-  }
-  h2 {
-    font-size: 3em;
-  }
-  h3 {
-    font-size: 2.67em;
-  }
-  h4 {
-    font-size: 2.5em;
   }
 }
