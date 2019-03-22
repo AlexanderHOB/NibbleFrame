@@ -2,6 +2,7 @@
 
 //Body
 const body = document.body;
+
 // Loading
 const $loading = document.querySelector('.loading');
 
