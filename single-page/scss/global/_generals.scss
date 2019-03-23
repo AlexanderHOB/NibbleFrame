@@ -5,8 +5,6 @@
 *:after {
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-	user-select: none;
-	-webkit-tap-highlight-color: transparent;
 }
 body {
 	font-family: $roboto, $sans-serif;
@@ -40,4 +38,6 @@ img {
 button,
 a {
 	cursor: pointer;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
 }
