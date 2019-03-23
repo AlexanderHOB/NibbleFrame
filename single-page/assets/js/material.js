@@ -1069,9 +1069,23 @@ class Component {
 
     _navLinks() {
       this._closeBound = this.close.bind(this);
-      for(let i of $navLinks){
-        i.addEventListener('click',this._closeBound);
+      const bp = window.matchMedia('only screen and (max-width: 767px)');
+      const validation = e => {
+        var instances;
+        if (e.matches) {
+          for(let i of $navLinks){
+            i.addEventListener('click',this._closeBound);
+          }
+        }else{
+          for(let i of $navLinks){
+            i.removeEventListener('click',this._closeBound);
+          }
+        }
       }
+
+      bp.addListener(validation);
+      validation(bp);
+
     }
 
     _setupEventHandlers() {
