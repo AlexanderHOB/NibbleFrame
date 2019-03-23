@@ -4,19 +4,19 @@
 	&-content {
 		display: flex;
 	}
-	&-link{
+	&-link {
 		display: inline-block;
 		margin-right: 32px;
 		color: rgba(255, 255, 255, .7);
 		transition: .3s;
-		&:hover{
+		&:hover {
 			color: $text-light;
 		}
-		@include mobile($bp-sm){
-			&#{&}-active{
+		@include mobile($bp-sm) {
+			&#{&}-active {
 				position: relative;
 				color: $text-light;
-				&:before{
+				&:before {
 					content: '\f107';
 					position: absolute;
 					top: -80%;
@@ -29,24 +29,18 @@
 			}
 		}
 	}
-	&-item:last-child &-link{
+	&-item:last-child &-link {
 		margin-right: 0;
 	}
-	&-header{
+	&-header {
 		display: none;
-		&-image{
-			display: none;
-		}
-		&-avatar{
-			display: none;
-		}
 	}
-	&-footer{
+	&-footer {
 		display: none;
 	}
 
 	// Sidenav
-	@include desktop($bp-sm){
+	@include desktop($bp-sm) {
 		position: fixed;
 		z-index: 92;
 		left: 0;
@@ -73,15 +67,25 @@
 			height: 100vh;
 			background-color: rgba(0, 0, 0, .5);
 		}
-		&-header{
+		&-header {
 			display: block;
 			position: relative;
 			width: 100%;
 			height: 200px;
 			overflow: hidden;
 			margin-bottom: 16px;
-			&-bg{
-				display: block;
+			&-close {
+				position: absolute;
+				z-index: 93;
+				top: 10px;
+				right: 10px;
+				background-color: transparent;
+				&-icon {
+					font-size: 24px;
+					color: $text-light;
+				}
+			}
+			&-bg {
 				position: absolute;
 				z-index: 92;
 				width: 100%;
@@ -91,14 +95,13 @@
 				background-position: center;
 				filter: brightness(.4);
 			}
-			&-avatar{
-				display: block;
+			&-avatar {
 				position: absolute;
 				z-index: 93;
 				left: 15px;
 				bottom: 20px;
 				color: $text-light;
-				&-img{
+				&-img {
 					width: 64px;
 					height: 64px;
 					border-radius: 50%;
@@ -107,14 +110,14 @@
 					background-position: center;
 					overflow: hidden;
 				}
-				&-branch{
+				&-branch {
 					margin-top: 20px;
 					margin-bottom: 10px;
 					font-weight: 500;
 				}
-				&-email{
+				&-email {
 					font-weight: 300;
-					.fas{
+					&-icon {
 						transform: translateY(1px);
 					}
 				}
@@ -123,16 +126,16 @@
 		&-content {
 			display: block;
 		}
-		&-link{
+		&-link {
 			display: block;
 			margin: 0;
 			padding: 16px 0 16px 50px;
 			font-size: 18px;
 			color: $text-dark;
-			&:hover{
+			&:hover {
 				color: $text-dark;
 			}
-			&:before{
+			&:before {
 				content: '\f015';
 				position: absolute;
 				font-family: $font-awesome;
@@ -140,35 +143,35 @@
 				top: 48%;
 				transform: translate(-35px, -50%);
 			}
-			&#{&}-active{
+			&#{&}-active {
 				color: $text-blue;
 			}
 		}
-		&-item:nth-child(2) &-link:before{
+		&-item:nth-child(2) &-link:before {
 			content: '\f0c0';
 		}
-		&-item:nth-child(3) &-link:before{
-			// content: '\f0e7';
+		&-item:nth-child(3) &-link:before {
 			content: '\f06d';
 		}
-		&-item:nth-child(4) &-link:before{
+		&-item:nth-child(4) &-link:before {
 			content: '\f1d8';
 		}
-		&-footer{
+		&-footer {
 			display: block;
 			position: absolute;
 			width: 100%;
 			bottom: 20px;
 			text-align: center;
-			& a{
+			&-nf {
 				color: $text-blue;
 			}
 		}
 	}
 }
-.drag-target{
+
+.drag-target {
 	display: none;
-	@include desktop($bp-sm){
+	@include desktop($bp-sm) {
 		display: block;
 		position: fixed;
 		top: 0;
@@ -177,21 +180,6 @@
 		height: 100vh;
 		width: 15px;
 		background-color: rgba(0, 0, 0, .005);
-	}
-}
-.nav-close{
-	display: none;
-	@include desktop($bp-sm){
-		display: block;
-		position: absolute;
-		z-index: 93;
-		top: 10px;
-		right: 10px;
-		background-color: transparent;
-		& i{
-			font-size: 24px;
-			color: $text-light;
-		}
 	}
 }
 

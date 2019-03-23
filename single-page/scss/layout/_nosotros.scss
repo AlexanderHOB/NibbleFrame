@@ -3,7 +3,7 @@
 .nosotros {
 	@extend %container;
 	background-color: $bg-nosotros;
-	&-title{
+	&-title {
 		color: $text-light;
 	}
 }

@@ -1,7 +1,7 @@
 // VARIABLES
 
 //Body
-const body = document.body;
+const $body = document.body;
 
 // Loading
 const $loading = document.querySelector('.loading');
@@ -25,5 +25,4 @@ $section.forEach((e) => {
 const $messenger = document.querySelector('.messenger'),
 $messengerToggle = document.querySelector('.messenger-toggle'),
 $messengerFacebookM = document.querySelector('.messenger-facebook-m'),
-$messengerChat = document.querySelector('.messenger-chat'),
-$closeChat = document.querySelector('.close-chat');
+$messengerChat = document.querySelector('.messenger-chat');

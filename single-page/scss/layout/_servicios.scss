@@ -3,7 +3,7 @@
 .servicios {
 	@extend %container;
 	background-color: $bg-servicios;
-	&-title{
+	&-title {
 		color: $text-light;
 	}
 }

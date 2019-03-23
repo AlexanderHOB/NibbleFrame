@@ -7,5 +7,5 @@ function chatNone(){
 }
 
 function bodyRemove(){
-	body.classList.remove('close-body', 'close-messenger-body', 'close-chat-body', 'close-helper-body');
+	$body.classList.remove('close-body', 'close-messenger-body', 'close-chat-body', 'close-helper-body');
 }
