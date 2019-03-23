@@ -27,18 +27,13 @@ window.addEventListener('resize', function(){
 	$section.forEach((e) => {
 		sections[e.id] = e.offsetTop;
 	});
+	scrollSpy();
 });
 
 //Document Scroll
 document.addEventListener('scroll', function(){
 	// ScrollSpy
-	scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
-	for (let i in sections) {
-		if (sections[i] <= scrollPosition + headerH) {
-			document.querySelector('.nav-link-active').classList.remove('nav-link-active');
-			document.querySelector('a[data-spy*=' + i + ']').classList.add('nav-link-active');
-		}
-	}
+	scrollSpy();
 
 	// Cambiar color
 	if(scrollPosition > 0){
