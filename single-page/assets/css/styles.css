@@ -631,63 +631,63 @@ a {
   text-align: center;
 }
 
-.sec-title h1.sec-title {
+h1.sec-title {
   font-size: 2em;
 }
 
-.sec-title h2.sec-title {
+h2.sec-title {
   font-size: 1.5em;
 }
 
-.sec-title h3.sec-title {
+h3.sec-title {
   font-size: 1.17em;
 }
 
-.sec-title h4.sec-title {
+h4.sec-title {
   font-size: 1em;
 }
 
 @media only screen and (min-width: 768px) {
-  .sec-title h1.sec-title {
+  h1.sec-title {
     font-size: 2.5em;
   }
-  .sec-title h2.sec-title {
+  h2.sec-title {
     font-size: 2em;
   }
-  .sec-title h3.sec-title {
+  h3.sec-title {
     font-size: 1.67em;
   }
-  .sec-title h4.sec-title {
+  h4.sec-title {
     font-size: 1.5em;
   }
 }
 
 @media only screen and (min-width: 992px) {
-  .sec-title h1.sec-title {
+  h1.sec-title {
     font-size: 3em;
   }
-  .sec-title h2.sec-title {
+  h2.sec-title {
     font-size: 2.5em;
   }
-  .sec-title h3.sec-title {
+  h3.sec-title {
     font-size: 2.17em;
   }
-  .sec-title h4.sec-title {
+  h4.sec-title {
     font-size: 2em;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .sec-title h1.sec-title {
+  h1.sec-title {
     font-size: 4em;
   }
-  .sec-title h2.sec-title {
+  h2.sec-title {
     font-size: 3em;
   }
-  .sec-title h3.sec-title {
+  h3.sec-title {
     font-size: 2.67em;
   }
-  .sec-title h4.sec-title {
+  h4.sec-title {
     font-size: 2.5em;
   }
 }
