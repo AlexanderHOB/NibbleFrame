@@ -2,9 +2,9 @@
 En este branch se crearan y gestionaran todas los templates de paginas web para nuestros proyectos.
 
 ## Buenas Practicas Front End
-Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
+Cuando alguien lea nuestra codigo que paresca que una sola persona lo escribio
 
-### Pracicas HTML
+### Prácticas HTML
 1. Jerarquia de h1-h6
 
 ### Practicas CSS
