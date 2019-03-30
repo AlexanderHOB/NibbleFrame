@@ -1,10 +1,10 @@
 # Templates for our Projects | NibbleFrame
-En este branch se crearan y gestionaran todas los templates de paginas web para nuestros proyectos.
+En este branch se crearan y gestionaran todos los templates de paginas web para nuestros proyectos.
 
 ## Buenas Practicas Front End
-Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
+Cuando alguien lea nuestro código que paresca que una sola persona lo escribio
 
-### Pracicas HTML
+### Practicas HTML
 1. Jerarquia de h1-h6
 
 ### Practicas CSS
@@ -50,6 +50,7 @@ Cuandlo alguien lea nuestra codigo que paresca que una sola persona lo escribio
     * Responsible Responsive Design: Buenas prácticas de CSS + JS
 6. BEM MOD
   * Nomenclatura BEM modificada solo ( - ) guiones block-element | block-modify block-element-modify 
+7. Evitar el uso de ñ s
 
 ### Practicas JS
 1. Nomeclatura Variables CamelCase Case / var ejemploDeNomenclatura

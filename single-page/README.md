@@ -3,7 +3,7 @@ Caracteristicas
 * scrollspy
 * responsive
 * sidenav drag out
-* Messenger Services
+* Messages Services
 
 ## Arquitectura Sass
 Organización de carpetas y archivos Sass.
@@ -11,13 +11,17 @@ Organización de carpetas y archivos Sass.
 ### Vendor
 Librerias externas
 
+### Priority
+* loading
+
 ### Lib
 Herramientas y helpers de Sass
 * base colors
 * variables
-* mixins
+* mixins-media
 * functions
 * placeholders
+* mixins
 
 ### Global
 Estilos y clases globales
@@ -27,10 +31,8 @@ Estilos y clases globales
 
 ### Layout
 Estilos de los layouts
-* loading
 * header
 * navigation
-* sections
 * inicio
 * nosotros
 * servicios
@@ -49,12 +51,6 @@ Forma de organizar archivos JS
 * events
 * functions
 * mediaQueries
-
-## Debates
-* Media Queries
-* Variables para todo
-* Material Design
-* Tamaño de imagenes
 
 ## Placeholders vs Mixins
 * Placeholder
