@@ -1,23 +1,21 @@
 // MEDIA QUERIES
 
-const breakpoint = window.matchMedia('only screen and (max-width: 767px)');
 const mql = e => {
-	var instances;
 	if (e.matches) {
-		$nav.style.transform = 'translateX(-105%)';
-		instances = M.Sidenav.init($nav);
 		for(let i of $navItems){
 			i.classList.add('waves');
 		}
+		for(let i of $navLinks){
+			i.addEventListener('click', navRemove);
+			console.log(i);
+		}
 	}else{
-		$body.style.overflow = '';
-		$nav.style.transform = 'translateX(0px)';
-		instances = M.Sidenav.init(null);
 		for(let i of $navItems){
 			i.classList.remove('waves');
+			i.removeEventListener('click', navRemove);
 		}
 	}
 }
 
-breakpoint.addListener(mql);
-mql(breakpoint);
+$breakpoint.addListener(mql);
+mql($breakpoint);

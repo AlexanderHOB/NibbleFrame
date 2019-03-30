@@ -2,15 +2,32 @@
 
 // Completely Loaded
 window.addEventListener('load', function() {
-	// Header Height
-	headerH = $header.offsetHeight;
-
 	// Loading
 	$loading.style.opacity = '0';
 	setTimeout(()=>{
 		$loading.style.display = 'none';
 	}, 1000);
 	NProgress.done();
+
+	// Nav slide down
+	const validation = e => {
+		if (e.matches) {
+			navH = $nav.scrollHeight + 'px'; 
+			$nav.style.height = '0px';
+			$navToggle.addEventListener('click', navToggle);
+		}else{
+			$nav.style.height = 'auto';
+			$nav.classList.remove('drop');
+			$navToggle.classList.remove('open', 'close');
+			$navToggle.removeEventListener('click', navToggle);
+		}
+	}
+	$breakpoint.addListener(validation);
+	validation($breakpoint);
+
+	// Header Height
+	headerH = $header.offsetHeight;
+	console.log(headerH);
 
 	// Chat none
 	chatNone();
@@ -34,11 +51,4 @@ window.addEventListener('resize', function(){
 document.addEventListener('scroll', function(){
 	// ScrollSpy
 	scrollSpy();
-
-	// Cambiar color
-	if(scrollPosition > 0){
-		$header.classList.add('header-active');
-	}else{
-		$header.classList.remove('header-active');
-	}
 })

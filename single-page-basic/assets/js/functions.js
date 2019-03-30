@@ -1,5 +1,34 @@
 //FUNCIONES
 
+// nav toggle
+function navToggle(){
+	// Button animation
+	if (this.classList.contains('open')) {
+		this.classList.remove(navToggleStatus);
+		navToggleStatus = 'close';
+	} else if (this.classList.contains('close')) {
+		this.classList.remove(navToggleStatus);
+		navToggleStatus = 'open';
+	}
+	void this.offsetWidth;
+	this.classList.add(navToggleStatus);
+
+	// Slide down
+	$nav.classList.toggle('drop');
+	$nav.classList.contains('drop') ? $nav.style.height = navH : $nav.style.height = '0px';
+
+}
+
+function navRemove(){
+	$nav.style.height = '0px';
+	$nav.classList.remove('drop');
+	$navToggle.classList.remove(navToggleStatus);
+	navToggleStatus = 'close';
+	void $navToggle.offsetWidth;
+	$navToggle.classList.add(navToggleStatus);
+
+}
+
 // ScrollSpy
 
 function scrollSpy(){

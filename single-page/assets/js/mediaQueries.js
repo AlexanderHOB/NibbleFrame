@@ -1,6 +1,5 @@
 // MEDIA QUERIES
 
-const breakpoint = window.matchMedia('only screen and (max-width: 767px)');
 const mql = e => {
 	var instances;
 	if (e.matches) {
@@ -19,5 +18,5 @@ const mql = e => {
 	}
 }
 
-breakpoint.addListener(mql);
-mql(breakpoint);
+$breakpoint.addListener(mql);
+mql($breakpoint);

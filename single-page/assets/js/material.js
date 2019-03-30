@@ -1260,7 +1260,7 @@ class Component {
 
 
       _handleCloseTriggerClick(e) {
-        let $closeTrigger = $(e.target).closest('.nav-close');
+        let $closeTrigger = $(e.target).closest('.nav-header-close');
         if ($closeTrigger.length && !this._isCurrentlyFixed()) {
           this.close();
         }

@@ -12,6 +12,7 @@ Organización de carpetas y archivos Sass.
 Librerias externas
 
 ### Priority
+Elementos prioritarios
 * loading
 
 ### Lib
@@ -46,10 +47,13 @@ Herramientas y helpers de css
 
 ## Organizacipon JS
 Forma de organizar archivos JS
+* librerias externas
 * variables
 * windowDocuemnt
 * events
 * functions
+* loading
+* code
 * mediaQueries
 
 ## Placeholders vs Mixins

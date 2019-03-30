@@ -16,6 +16,11 @@ var headerH,
 sections = [],
 scrollPosition;
 
+// Breakpoints
+const $breakpoint = window.matchMedia('only screen and (max-width: 767px)');
+
+
+
 //ScrollSpy
 $section.forEach((e) => {
 	sections[e.id] = e.offsetTop;
