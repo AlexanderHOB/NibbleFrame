@@ -5,6 +5,9 @@ En este branch se crearan y gestionaran todos los templates de paginas web para 
 Cuando alguien lea nuestro código que paresca que una sola persona lo escribio
 
 ### Practicas HTML
+Cuando alguien lea nuestra codigo que paresca que una sola persona lo escribio
+
+### Prácticas HTML
 1. Jerarquia de h1-h6
 
 ### Practicas CSS
