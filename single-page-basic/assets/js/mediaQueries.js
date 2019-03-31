@@ -7,15 +7,16 @@ const mql = e => {
 		}
 		for(let i of $navLinks){
 			i.addEventListener('click', navRemove);
-			console.log(i);
 		}
 	}else{
 		for(let i of $navItems){
 			i.classList.remove('waves');
+		}
+		for(let i of $navLinks){
 			i.removeEventListener('click', navRemove);
 		}
 	}
 }
 
-$breakpoint.addListener(mql);
-mql($breakpoint);
+$desktopBpSm.addListener(mql);
+mql($desktopBpSm);

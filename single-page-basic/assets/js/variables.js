@@ -20,7 +20,7 @@ sections = [],
 scrollPosition;
 
 // Breakpoints
-$breakpoint = window.matchMedia('only screen and (max-width: 767px)');
+$desktopBpSm = window.matchMedia('only screen and (max-width: 767px)');
 
 
 //ScrollSpy

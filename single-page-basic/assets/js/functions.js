@@ -14,6 +14,7 @@ function navToggle(){
 	this.classList.add(navToggleStatus);
 
 	// Slide down
+	navH = $nav.scrollHeight + 'px';
 	$nav.classList.toggle('drop');
 	$nav.classList.contains('drop') ? $nav.style.height = navH : $nav.style.height = '0px';
 
@@ -30,7 +31,6 @@ function navRemove(){
 }
 
 // ScrollSpy
-
 function scrollSpy(){
 	scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 	for (let i in sections) {

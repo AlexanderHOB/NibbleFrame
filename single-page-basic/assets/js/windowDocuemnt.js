@@ -10,9 +10,8 @@ window.addEventListener('load', function() {
 	NProgress.done();
 
 	// Nav slide down
-	const validation = e => {
+	const validationNav = e => {
 		if (e.matches) {
-			navH = $nav.scrollHeight + 'px'; 
 			$nav.style.height = '0px';
 			$navToggle.addEventListener('click', navToggle);
 		}else{
@@ -22,12 +21,23 @@ window.addEventListener('load', function() {
 			$navToggle.removeEventListener('click', navToggle);
 		}
 	}
-	$breakpoint.addListener(validation);
-	validation($breakpoint);
+	$desktopBpSm.addListener(validationNav);
+	validationNav($desktopBpSm);
 
 	// Header Height
 	headerH = $header.offsetHeight;
-	console.log(headerH);
+
+	const validationHeader = e => {
+		if (e.matches) {
+			$header.classList.add('header-active');
+		}else{
+			if(document.documentElement.scrollTop == 0){	
+				$header.classList.remove('header-active');
+			}
+		}
+	}
+	$desktopBpSm.addListener(validationHeader);
+	validationHeader($desktopBpSm);
 
 	// Chat none
 	chatNone();
@@ -51,4 +61,18 @@ window.addEventListener('resize', function(){
 document.addEventListener('scroll', function(){
 	// ScrollSpy
 	scrollSpy();
+
+	// Cambiar color
+	const validationHeaderScroll = e => {
+		if (!e.matches) {
+			if(scrollPosition > 0){	
+				$header.classList.add('header-active');
+			}else{
+				$header.classList.remove('header-active');
+			}
+		}
+	}
+	$desktopBpSm.addListener(validationHeaderScroll);
+	validationHeaderScroll($desktopBpSm);
+
 })

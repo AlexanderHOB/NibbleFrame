@@ -18,5 +18,5 @@ const mql = e => {
 	}
 }
 
-$breakpoint.addListener(mql);
-mql($breakpoint);
+$desktopBpSm.addListener(mql);
+mql($desktopBpSm);

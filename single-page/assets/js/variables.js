@@ -17,7 +17,7 @@ sections = [],
 scrollPosition;
 
 // Breakpoints
-const $breakpoint = window.matchMedia('only screen and (max-width: 767px)');
+const $desktopBpSm = window.matchMedia('only screen and (max-width: 767px)');
 
 
 
