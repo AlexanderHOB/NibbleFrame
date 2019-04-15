@@ -1,13 +1,12 @@
-# Template Single Page | NibbleFrame
+# Template PixeLand | NibbleFrame
 Caracteristicas
 * scrollspy
 * responsive
 * sidenav drag out
-* Messages Services
 
 ## Librerias
 * FontAwesome
-* Animate on Scroll4
+* Animate on Scroll
 
 ## Arquitectura Sass
 Organización de carpetas y archivos Sass.
