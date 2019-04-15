@@ -1,65 +1,63 @@
-# Templates for our Projects | NibbleFrame
-En este branch se crearan y gestionaran todos los templates de paginas web para nuestros proyectos.
+# Template Single Page Basic | NibbleFrame
+Caracteristicas
+* scrollspy
+* responsive
+* nav slide down
+* Messages Services
 
-## Buenas Practicas Front End
-Cuando alguien lea nuestro código que paresca que una sola persona lo escribio
+## Arquitectura Sass
+Organización de carpetas y archivos Sass.
 
-### Prácticas HTML
-1. Jerarquia de h1-h6
+### Vendor
+Librerias externas
 
-### Practicas CSS
-1. Escribe CSS reutilizable DRY (Don't Repeat Yourself)
-2. Nomeclatura de clases Kebab Case ejemplo-de-nomenclatura
-3. Formula PC-TV en el ordenamiento de los atributos CSS 
-    * Posicionamiento: position, z-index, display, float 
-    * Caja (Modelo de Caja): width, height, padding, border, margin
-    * Texto: font-\*, text-\*
-    * Variado: background,  opacity, transition, ...
-4. Enfoques 
-    * Mobile First - Progressive Enhancement
-    
-    ```css
-    .content {
+### Priority
+Elementos prioritarios
+* loading
 
-      @media (min-width: 800px) {
-        float: left;
-        width: 60%;
-      }
-    }
-    ```
+### Lib
+Herramientas y helpers de Sass
+* base colors
+* variables
+* mixins-media
+* functions
+* placeholders
+* mixins
 
-    * Desktop First - Graceful Degration
+### Global
+Estilos y clases globales
+* reset
+* generals
+* class
 
-    ```css
-    .content {
-      float: left;
-      width: 60%;
+### Layout
+Estilos de los layouts
+* header
+* navigation
+* inicio
+* nosotros
+* servicios
+* contactanos
+* footer
 
-      @media (max-width: 800px) {
-        float: none;
-        width: 100%;
-      }
-    }
-    ```
+### Components
+Herramientas y helpers de css
+* media
+* animations
 
-5. Aplicar Responsibe Design a nuestro Responsive Design
-    * Responsive Design: Buenas practicas con css
-        *  Uso de media queries
-        * Todo los elementos que no sean textos tienen que ser flexibles(imagenes, videos, layout, etc)
-        * Grid Flexible
-    * Responsible Responsive Design: Buenas prácticas de CSS + JS
-6. BEM MOD
-  * Nomenclatura BEM modificada solo ( - ) guiones block-element | block-modify block-element-modify 
-7. Evitar el uso de ñ s
+## Organizacipon JS
+Forma de organizar archivos JS
+* librerias externas
+* variables
+* windowDocuemnt
+* events
+* functions
+* loading
+* code
+* mediaQueries
 
-### Practicas JS
-1. Nomeclatura Variables CamelCase Case / var ejemploDeNomenclatura
-2. Nomenclatura Constantes del DOM Iniciar con $ y CamelCase / const $ejemploDeNomenclatura
-3. Clases(POO) Primera letra con Mayuscula
-4. Uso de let en for / foreach
-
-### Validacion HTML
-![Validation](md-resources/w3c-validation.jpg)
-
-### Semantic HTML5
-![Semantic](md-resources/semantic.png)
+## Placeholders vs Mixins
+* Placeholder
+![Placeholder](../md-resources/placeholder-vs-mixin-1.jpg)
+* Mixin
+![Mixin](../md-resources/placeholder-vs-mixin-2.jpg)
