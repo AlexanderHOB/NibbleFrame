@@ -13,9 +13,9 @@
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
+  -webkit-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 .loader {
